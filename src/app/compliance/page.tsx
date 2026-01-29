@@ -56,7 +56,7 @@ export default function CompliancePage() {
                             <div className="p-6 bg-white/5 rounded-2xl border border-white/5">
                                 <CheckCircle className="text-green-500 mb-4" />
                                 <h4 className="font-bold mb-2">Local VPS Hosting</h4>
-                                <p className="text-sm text-slate-500">Every application we build is deployed to Lusaka-based servers (Infratel/Netone).</p>
+                                <p className="text-sm text-slate-500">Every application we build is deployed to Zambia-based servers (Infratel/Netone).</p>
                             </div>
                             <div className="p-6 bg-white/5 rounded-2xl border border-white/5">
                                 <CheckCircle className="text-green-500 mb-4" />

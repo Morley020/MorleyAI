@@ -43,7 +43,7 @@ export default function CyberMonitor() {
                 </div>
                 <div className="text-right">
                     <p className="text-xs text-slate-500 uppercase">Local Host</p>
-                    <p className="text-sm font-mono text-blue-500">Lusaka-VZ1-Node</p>
+                    <p className="text-sm font-mono text-blue-500">Zambia-VZ1-Node</p>
                 </div>
             </div>
 
