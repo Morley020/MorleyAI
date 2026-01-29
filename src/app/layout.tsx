@@ -42,7 +42,7 @@ export default function RootLayout({
             </div>
             <div className="space-y-4">
               <h4 className="text-white font-semibold">Contact</h4>
-              <p className="text-slate-400 text-sm">Lusaka, Zambia</p>
+              <p className="text-slate-400 text-sm">Zambia</p>
               <p className="text-slate-400 text-sm underline group hover:text-blue-500 transition-colors cursor-pointer">info@morley.ai.co.zm</p>
             </div>
           </div>

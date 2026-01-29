@@ -16,7 +16,7 @@ We aren't just selling code; we are selling **Business Resilience**.
 "Did you know that in 2025, Zambian businesses lost over 200 million Kwacha to cybercrime? Most SMEs think they are too small to be targets, but hackers actually love small businesses because their 'doors' are often left unlocked."
 
 ### The Pivot (Advanced Analytics)
-"At MorleyAI, we don't just lock the doors; we give you a telescope. We build your software, we host it locally in Lusaka to keep you legal, and we use AI to analyze your sales. We can tell you exactly which products will sell out next month so you don't waste capital."
+"At MorleyAI, we don't just lock the doors; we give you a telescope. We build your software, we host it locally in Zambia to keep you legal, and we use AI to analyze your sales. We can tell you exactly which products will sell out next month so you don't waste capital."
 
 ### The Offer
 "I want to run a 'Security & Data Audit' on your current systems. It takes 24 hours, and I'll give you a report showing where your risks are and where your hidden profits are. Can we start on Monday?"

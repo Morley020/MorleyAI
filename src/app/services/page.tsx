@@ -129,7 +129,7 @@ export default function ServicesPage() {
                             {
                                 step: "03",
                                 name: "Local Vault",
-                                desc: "Encrypted deployment to Lusaka-based VPS nodes, ensuring 100% data sovereignty and law compliance.",
+                                desc: "Encrypted deployment to Zambia-based VPS nodes, ensuring 100% data sovereignty and law compliance.",
                                 icon: Database,
                                 color: "blue"
                             },

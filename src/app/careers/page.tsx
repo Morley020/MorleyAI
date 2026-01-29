@@ -20,7 +20,7 @@ const vacancies = [
     {
         title: "AI Agent Architect",
         department: "Engineering",
-        location: "Lusaka (Hybrid)",
+        location: "Zambia (Hybrid)",
         type: "Full-time",
         icon: Brain,
         description: "Design and implement autonomous AI agents using LangChain and Next.js. You'll be building the brain of our SME software suites.",
@@ -29,7 +29,7 @@ const vacancies = [
     {
         title: "Cybersecurity Compliance lead",
         department: "Security",
-        location: "Lusaka (On-site)",
+        location: "Zambia (On-site)",
         type: "Full-time",
         icon: Shield,
         description: "Lead our SME protection initiative. Monitor real-time threats and ensure all client builds meet the Cyber Security Act No. 3 of 2025.",
@@ -47,16 +47,16 @@ const vacancies = [
     {
         title: "Cloud Infrastructure Engineer",
         department: "Operations",
-        location: "Lusaka (On-site)",
+        location: "Zambia (On-site)",
         type: "Full-time",
         icon: Server,
         description: "Manage our local Zambian server fleet. Optimize VPS performance on Infratel/Netone national infrastructure.",
-        requirements: ["Kubernetes & Docker expertise", "Local networking (Zambia/Lusaka hub)", "High-availability system design"]
+        requirements: ["Kubernetes & Docker expertise", "Local networking (Zambia hub)", "High-availability system design"]
     },
     {
         title: "B2B Technical Sales Lead",
         department: "Growth",
-        location: "Lusaka",
+        location: "Zambia",
         type: "Full-time",
         icon: Rocket,
         description: "Drive the 'Secure Intelligence' pivot. Pitching business resilience to Law firms, Micro-finance, and Retail leaders.",
@@ -65,7 +65,7 @@ const vacancies = [
     {
         title: "Legal Tech Consultant",
         department: "Compliance",
-        location: "Lusaka",
+        location: "Zambia",
         type: "Contract",
         icon: Scale,
         description: "Map technical architectures to the Zambia Data Protection Act. Helping clients bridge the gap between code and law.",
@@ -100,7 +100,7 @@ export default function CareersPage() {
                         transition={{ delay: 0.1 }}
                         className="text-slate-400 text-lg max-w-3xl mx-auto"
                     >
-                        We are looking for pioneers to drive the **Secure Intelligence** suite. From coding agentic AI to monitoring Lusaka's data borders, your work at MorleyAI will redefine Zambian industry.
+                        We are looking for pioneers to drive the **Secure Intelligence** suite. From coding agentic AI to monitoring Zambia's data borders, your work at MorleyAI will redefine Zambian industry.
                     </motion.p>
                 </div>
 

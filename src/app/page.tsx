@@ -40,7 +40,7 @@ export default function Home() {
           >
             We don't just build code; we build <strong>Business Resilience</strong>.
             MorleyAI provides high-speed enterprise software, AI-driven cybersecurity, and predictive analytics
-            hosted locally in Lusaka for 100% legal compliance.
+            hosted locally in Zambia for 100% legal compliance.
           </motion.p>
 
           <motion.div
@@ -136,7 +136,7 @@ export default function Home() {
             </p>
             <div className="space-y-4">
               {[
-                { title: "Real-time Threat Monitoring", desc: "See every malicious IP blocked in Lusaka." },
+                { title: "Real-time Threat Monitoring", desc: "See every malicious IP blocked in Zambia." },
                 { title: "Predictive Sales Analytics", desc: "Forecast inventory needs with ML agents." },
                 { title: "Automated Compliance Audits", desc: "Generate legal PDF reports in one click." }
               ].map((item, i) => (

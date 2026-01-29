@@ -73,7 +73,7 @@ export default function AboutPage() {
                             For years, Zambian enterprises have been caught in a dilemma: adopt powerful global software hosted in foreign clouds—breaking local data protection laws—or settle for outdated local systems that can't keep up with the speed of AI.
                         </p>
                         <p className="text-lg text-slate-400 leading-relaxed">
-                            <strong>MorleyAI</strong> was born to bridge this gap. We combine high-speed agentic development with Lusaka-based infrastructure. We don't just build apps; we build the <strong>Secure Intelligence</strong> that allows Zambian businesses to compete on a global stage while remaining rooted at home.
+                            <strong>MorleyAI</strong> was born to bridge this gap. We combine high-speed agentic development with Zambia-based infrastructure. We don't just build apps; we build the <strong>Secure Intelligence</strong> that allows Zambian businesses to compete on a global stage while remaining rooted at home.
                         </p>
                     </motion.div>
                     <div className="relative">
