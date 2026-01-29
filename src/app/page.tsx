@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 import { ArrowRight, Bot, Database, Zap, Cpu, Server, ShieldCheck, LayoutDashboard, Lock } from "lucide-react";
 import Link from "next/link";
 
+/**
+ * HomePage Structure
+ * 
+ * 1. Hero Section: High-impact introduction with "AI + Zambia" value prop.
+ * 2. Partners: Logos of strategic infrastructure partners (Infratel, etc).
+ * 3. Features: 3-column grid highlighting Speed, Local Hosting, and Compliance.
+ * 4. Client Portal: Feature showcase for the Dashboard.
+ * 5. Contact: Lead capture form.
+ */
 export default function Home() {
   return (
     <div className="relative pt-20">

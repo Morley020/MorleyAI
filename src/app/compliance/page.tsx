@@ -3,6 +3,15 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Scale, FileText, CheckCircle, Info } from "lucide-react";
 
+/**
+ * Compliance Page
+ * 
+ * Explains MorleyAI's adherence to the Zambia Data Protection Act No. 3 of 2021.
+ * Highlights:
+ * - Data Sovereignty (Local VPS hosting)
+ * - Consent Management
+ * - Data Subject Rights
+ */
 export default function CompliancePage() {
     const requirements = [
         {

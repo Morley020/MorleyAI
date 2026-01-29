@@ -12,6 +12,14 @@ export const metadata: Metadata = {
   keywords: ["AI Zambia", "Software Development Lusaka", "Data Protection Act Zambia", "MorleyAI", "Zambian Tech"],
 };
 
+/**
+ * RootLayout
+ * 
+ * The main wrapper for the entire application.
+ * - Imports global fonts (Inter & Orbitron)
+ * - Sets up the global mesh gradient background
+ * - Includes the sticky Navbar and standard Footer
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

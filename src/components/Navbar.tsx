@@ -6,10 +6,20 @@ import { motion } from "framer-motion";
 import { Menu, X, Cpu, Rocket, ShieldCheck, Github, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+/**
+ * Navbar Component
+ * 
+ * The main navigation bar for MorleyAI.
+ * Features:
+ * - Glassmorphism effect on scroll
+ * - Responsive mobile menu
+ * - Animated brand logo
+ */
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Handle scroll detection for glass effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);

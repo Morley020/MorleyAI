@@ -73,6 +73,15 @@ const vacancies = [
     }
 ];
 
+/**
+ * Careers Page
+ * 
+ * Lists currently open positions at MorleyAI.
+ * Features:
+ * - Dynamic job grid from `vacancies` array.
+ * - Filters for "Shield" (Security) vs "Telescope" (Analytics) roles.
+ * - Call to action for Zambian tech leaders.
+ */
 export default function CareersPage() {
     return (
         <div className="pt-32 pb-24 px-6 min-h-screen">

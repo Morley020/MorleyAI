@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Shield, Zap, Globe, Heart, Award, Target, Landmark, Lightbulb } from "lucide-react";
 
+/**
+ * About Page
+ * 
+ * Tells the story of MorleyAI's mission in Zambia.
+ * Sections:
+ * 1. Mission Hero: High-level purpose statement.
+ * 2. Story: The "Why" - bridging global AI with local laws.
+ * 3. Values: Core pillars (Sovereignty, Velocity, Security).
+ * 4. Vision 2030: Long-term goals.
+ */
 export default function AboutPage() {
     const values = [
         {

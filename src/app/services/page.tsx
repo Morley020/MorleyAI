@@ -37,6 +37,16 @@ const services = [
     }
 ];
 
+/**
+ * Services Page
+ * 
+ * Details the 3 core offerings of MorleyAI:
+ * 1. AI Cybersecurity (The Shield)
+ * 2. Advanced Analytics (The Telescope)
+ * 3. SME Software Suite (The Engine)
+ * 
+ * Includes the 4-step "MorleyAI Methodology" for client education.
+ */
 export default function ServicesPage() {
     return (
         <div className="pt-32 pb-24 min-h-screen space-y-32">
