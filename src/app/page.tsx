@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Bot, Database, Zap, Cpu, Server, ShieldCheck, LayoutDashboard, Lock } from "lucide-react";
+import { ArrowRight, Bot, Cpu, Server, ShieldCheck, LayoutDashboard, Binary, Activity, Lock as LockIcon } from "lucide-react";
 import Link from "next/link";
 import TechStackMarquee from "@/components/TechStackMarquee";
 import PartnerNetwork from "@/components/PartnerNetwork";
 import ProjectShowcase from "@/components/ProjectShowcase";
+import SectorExpertise from "@/components/SectorExpertise";
 
 /**
  * HomePage Structure
@@ -82,6 +83,9 @@ export default function Home() {
       {/* Partner Logos Section */}
       <PartnerNetwork />
 
+      {/* Sector Expertise Section */}
+      <SectorExpertise />
+
       {/* Features Grid */}
       <section className="py-24 px-6 bg-black/50">
         <div className="max-w-7xl mx-auto">
@@ -91,33 +95,33 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl glass glow-hover transition-all">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="text-blue-500 w-8 h-8" />
+            <div className="p-8 rounded-[2rem] glass hover:border-blue-500/30 transition-all border border-white/5">
+              <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20">
+                <Binary className="text-blue-500 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold mb-4">AI-Speed Development</h3>
-              <p className="text-slate-400 leading-relaxed">
-                By leveraging advanced AI agents, we cut development cycles by 60%. Get your prototype in hands in less than 2 weeks.
+              <h3 className="text-xl font-bold mb-4 text-white">Software Engineering</h3>
+              <p className="text-slate-400 leading-relaxed text-sm">
+                Bespoke enterprise architecture built with AI velocity. We specialize in high-scale ERPs, Fintech, and custom organizational systems.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl glass glow-hover transition-all">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
-                <Database className="text-purple-500 w-8 h-8" />
+            <div className="p-8 rounded-[2rem] glass hover:border-rose-500/30 transition-all border border-white/5">
+              <div className="w-14 h-14 bg-rose-500/10 rounded-2xl flex items-center justify-center mb-6 border border-rose-500/20">
+                <ShieldCheck className="text-rose-500 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Local Hosting Only</h3>
-              <p className="text-slate-400 leading-relaxed">
-                Your data never leaves Zambian borders. We partner with local Tier-III data centers (Infratel/Netone) for maximum sovereignty.
+              <h3 className="text-xl font-bold mb-4 text-white">Cyber Security</h3>
+              <p className="text-slate-400 leading-relaxed text-sm">
+                Elite offensive and defensive operations. We ensure Act No. 3 compliance and 100% data sovereignty through local Zambian hosting.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl glass glow-hover transition-all">
-              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6">
-                <ShieldCheck className="text-green-500 w-8 h-8" />
+            <div className="p-8 rounded-[2rem] glass hover:border-emerald-500/30 transition-all border border-white/5">
+              <div className="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 border border-emerald-500/20">
+                <Activity className="text-emerald-500 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Zambian Compliant</h3>
-              <p className="text-slate-400 leading-relaxed">
-                Legally built for Zambian Law. Our systems comply strictly with the Data Protection Act No. 3 of 2021.
+              <h3 className="text-xl font-bold mb-4 text-white">Monitoring & Evaluation</h3>
+              <p className="text-slate-400 leading-relaxed text-sm">
+                Data-driven insight frameworks. We automate organizational reporting and impact analysis with advanced predictive ML agents.
               </p>
             </div>
           </div>
@@ -214,7 +218,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="p-4 bg-blue-600 rounded-full shadow-2xl animate-pulse">
-                  <Lock className="w-8 h-8 text-white" />
+                  <LockIcon className="w-8 h-8 text-white" />
                 </div>
               </div>
             </div>

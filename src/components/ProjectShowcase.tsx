@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Database, Globe, Layers } from "lucide-react";
+import { ArrowRight, Shield, Globe, Layers } from "lucide-react";
 import Link from "next/link";
 
 const projects = [
@@ -14,7 +14,6 @@ const projects = [
         icon: Shield,
         color: "blue"
     },
-
     {
         title: "Service Watch",
         category: "Citizen Intelligence Hub",
@@ -50,7 +49,7 @@ export default function ProjectShowcase() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {projects.map((project, idx) => (
                         <motion.div
                             key={project.title}

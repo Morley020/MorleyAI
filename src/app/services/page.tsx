@@ -3,36 +3,36 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-    Code2,
     ShieldCheck,
-    BarChart3,
     ArrowRight,
-    CheckCircle2
+    CheckCircle2,
+    Binary,
+    Activity
 } from "lucide-react";
 import SecurityEcosystem from "@/components/SecurityEcosystem";
 import AgenticPipeline from "@/components/AgenticPipeline";
 
 const services = [
     {
-        title: "Defensive Cyber Ops",
-        description: "Beyond simple firewalls. We implement AI-driven Defensive Operations (SecOps) and real-time adversary detection.",
-        icon: ShieldCheck,
-        features: ["Managed Threat Hunting", "24/7 AI-Agent Monitoring", "Local Log Sovereignty", "Quantum-Resistant Encryption"],
+        title: "Software Engineering",
+        description: "Bespoke enterprise architecture engineered with AI-agentic velocity. From high-scale ERPs to specialized Fintech platforms, we build the engines of African industry.",
+        icon: Binary,
+        features: ["Scalable Microservices", "Agent-Assisted Coding", "Legacy System Integration", "Cloud-Native Infrastructure"],
         color: "blue"
     },
     {
-        title: "Predictive Intelligence",
-        description: "Transforming big data into strategic foresight. We build ML pipelines for sales, inventory, and market trend forecasting.",
-        icon: BarChart3,
-        features: ["Prophet Model Integration", "Automated KPI Generation", "Interactive Intelligence Dashboards", "Big Data Pipeline Ops"],
-        color: "purple"
+        title: "Cyber Security",
+        description: "Elite defensive operations that go beyond simple firewalls. We provide offensive security testing, real-time threat hunting, and 100% Zambian data sovereignty.",
+        icon: ShieldCheck,
+        features: ["VAPT & Red Teaming", "Zambia Act No. 3 Compliance", "AI-Driven Sentry Logs", "Data Sovereignty Vaults"],
+        color: "rose"
     },
     {
-        title: "Elite Enterprise Systems",
-        description: "Mission-critical software engineered with AI velocity. From ERPs to Fintech platforms, built on Zambian ground.",
-        icon: Code2,
-        features: ["High-Velocity Prototyping", "Scalable Microservices", "Zambian Compliance Ledger", "Tier-III Local Hosting"],
-        color: "green"
+        title: "Monitoring & Evaluation",
+        description: "Transforming organizational data into actionable intelligence. We build custom M&E frameworks that track impact, optimize resources, and drive evidence-based decisions.",
+        icon: Activity,
+        features: ["Real-time KPI Dashboards", "Field Data Collection", "Impact Analysis ML", "Organizational Reporting"],
+        color: "emerald"
     }
 ];
 
