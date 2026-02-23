@@ -14,15 +14,7 @@ const projects = [
         icon: Shield,
         color: "blue"
     },
-    {
-        title: "eCHIS v2.0",
-        category: "National Health Intelligence",
-        description: "A joint partnership initiative digitizing community health data capture and monitoring systems across the nation.",
-        tech: ["PostgreSQL", "React", "Node.js"],
-        impact: "65% Faster Reporting",
-        icon: Database,
-        color: "purple"
-    },
+
     {
         title: "Service Watch",
         category: "Citizen Intelligence Hub",
