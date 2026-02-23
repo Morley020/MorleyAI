@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowRight, Shield, Database, Globe, Layers } from "lucide-react";
+import { ArrowRight, Shield, Database, Globe, Layers } from "lucide-react";
 import Link from "next/link";
 
 const projects = [
