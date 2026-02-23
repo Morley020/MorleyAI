@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Cpu, Rocket, ShieldCheck, Github, ExternalLink } from "lucide-react";
+import { Menu, X, Cpu } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**

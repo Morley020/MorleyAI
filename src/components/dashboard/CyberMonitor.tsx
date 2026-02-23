@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShieldCheck, ShieldAlert, Activity, Globe, Lock, UserX } from "lucide-react";
+import { ShieldCheck, ShieldAlert, Activity, Globe } from "lucide-react";
 
 export default function CyberMonitor() {
     const [threats, setThreats] = useState<{ id: string; ip: string; location: string; time: string; type: string }[]>([]);

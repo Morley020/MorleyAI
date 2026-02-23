@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Orbitron } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-geist-sans" });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
@@ -41,11 +42,11 @@ export default function RootLayout({
             <div className="space-y-4">
               <h4 className="text-white font-semibold">Links</h4>
               <ul className="text-slate-400 text-sm space-y-2">
-                <li><a href="/" className="hover:text-blue-500 transition-colors">Home</a></li>
-                <li><a href="/about" className="hover:text-blue-500 transition-colors">About Us</a></li>
-                <li><a href="/services" className="hover:text-blue-500 transition-colors">Services</a></li>
-                <li><a href="/compliance" className="hover:text-blue-500 transition-colors">Compliance</a></li>
-                <li><a href="/careers" className="hover:text-blue-500 transition-colors">Careers</a></li>
+                <li><Link href="/" className="hover:text-blue-500 transition-colors">Home</Link></li>
+                <li><Link href="/about" className="hover:text-blue-500 transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-blue-500 transition-colors">Services</Link></li>
+                <li><Link href="/compliance" className="hover:text-blue-500 transition-colors">Compliance</Link></li>
+                <li><Link href="/careers" className="hover:text-blue-500 transition-colors">Careers</Link></li>
               </ul>
             </div>
             <div className="space-y-4">

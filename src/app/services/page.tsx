@@ -113,7 +113,7 @@ export default function ServicesPage() {
                         <h2 className="text-4xl md:text-6xl font-black mb-4">The MorleyAI <span className="text-gradient">Methodology</span></h2>
                         <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mb-6" />
                         <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                            We've re-engineered the software lifecycle for the AI age. No more "wait and see"—we build, secure, and scale with pinpoint precision.
+                            We&apos;ve re-engineered the software lifecycle for the AI age. No more &quot;wait and see&quot;—we build, secure, and scale with pinpoint precision.
                         </p>
                     </div>
 

@@ -65,7 +65,7 @@ export default function AboutPage() {
                         transition={{ delay: 0.1 }}
                         className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed"
                     >
-                        MorleyAI was founded on a simple realization: Zambian businesses deserve the world's most advanced AI technology without compromising their legal data sovereignty.
+                        MorleyAI was founded on a simple realization: Zambian businesses deserve the world&apos;s most advanced AI technology without compromising their legal data sovereignty.
                     </motion.p>
                 </section>
 
@@ -80,10 +80,10 @@ export default function AboutPage() {
                         <h2 className="text-4xl font-bold text-white">Our Story</h2>
                         <div className="w-20 h-1.5 bg-blue-600 rounded-full" />
                         <p className="text-lg text-slate-400 leading-relaxed">
-                            For years, Zambian enterprises have been caught in a dilemma: adopt powerful global software hosted in foreign clouds—breaking local data protection laws—or settle for outdated local systems that can't keep up with the speed of AI.
+                            For years, Zambian enterprises have been caught in a dilemma: adopt powerful global software hosted in foreign clouds—breaking local data protection laws—or settle for outdated local systems that can&apos;t keep up with the speed of AI.
                         </p>
                         <p className="text-lg text-slate-400 leading-relaxed">
-                            <strong>MorleyAI</strong> was born to bridge this gap. We combine high-speed agentic development with Zambia-based infrastructure. We don't just build apps; we build the <strong>Secure Intelligence</strong> that allows Zambian businesses to compete on a global stage while remaining rooted at home.
+                            <strong>MorleyAI</strong> was born to bridge this gap. We combine high-speed agentic development with Zambia-based infrastructure. We don&apos;t just build apps; we build the <strong>Secure Intelligence</strong> that allows Zambian businesses to compete on a global stage while remaining rooted at home.
                         </p>
                     </motion.div>
                     <div className="relative">
@@ -150,7 +150,7 @@ export default function AboutPage() {
                         <Target className="w-16 h-16 text-blue-500 mb-8" />
                         <h2 className="text-4xl md:text-5xl font-black mb-8">Our Vision for 2030</h2>
                         <p className="text-xl text-slate-400 max-w-2xl mb-12">
-                            To be the primary architect of Zambia's digital sovereign future, where every SME has the power of an AI-driven enterprise.
+                            To be the primary architect of Zambia&apos;s digital sovereign future, where every SME has the power of an AI-driven enterprise.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href="/#contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl transition-all shadow-lg shadow-blue-500/20 text-center">

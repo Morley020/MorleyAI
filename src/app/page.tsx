@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Bot, Database, Zap, Cpu, Server, ShieldCheck, LayoutDashboard, Lock } from "lucide-react";
 import Link from "next/link";
+import TechStackMarquee from "@/components/TechStackMarquee";
 
 /**
  * HomePage Structure
@@ -28,7 +29,7 @@ export default function Home() {
             className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-blue-500/30 text-blue-400 text-sm font-medium mb-8"
           >
             <Bot className="w-4 h-4" />
-            <span>Zambia's First AI-First Software Agency</span>
+            <span>Zambia&apos;s First AI-First Software Agency</span>
           </motion.div>
 
           <motion.h1
@@ -47,7 +48,7 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed"
           >
-            We don't just build code; we build <strong>Business Resilience</strong>.
+            We don&apos;t just build code; we build <strong>Business Resilience</strong>.
             MorleyAI provides high-speed enterprise software, AI-driven cybersecurity, and predictive analytics
             hosted locally in Zambia for 100% legal compliance.
           </motion.p>
@@ -150,6 +151,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Technologies Section */}
+      <TechStackMarquee />
 
       {/* Client Portal Section */}
       <section className="py-24 px-6 relative overflow-hidden">

@@ -2,15 +2,12 @@
 
 import { motion } from "framer-motion";
 import {
-    Briefcase,
     MapPin,
     Clock,
     ArrowRight,
     Brain,
     Shield,
     Rocket,
-    Users,
-    Database,
     Scale,
     LineChart,
     Server
@@ -109,7 +106,7 @@ export default function CareersPage() {
                         transition={{ delay: 0.1 }}
                         className="text-slate-400 text-lg max-w-3xl mx-auto"
                     >
-                        We are looking for pioneers to drive the **Secure Intelligence** suite. From coding agentic AI to monitoring Zambia's data borders, your work at MorleyAI will redefine Zambian industry.
+                        We are looking for pioneers to drive the **Secure Intelligence** suite. From coding agentic AI to monitoring Zambia&apos;s data borders, your work at MorleyAI will redefine Zambian industry.
                     </motion.p>
                 </div>
 
@@ -179,7 +176,7 @@ export default function CareersPage() {
                                     <Shield className="w-4 h-4" /> The Shield
                                 </h4>
                                 <p className="text-slate-400 text-sm leading-relaxed">
-                                    We are building the first proactive cybersecurity layer for Zambian SMEs. You won't just solve problems; you'll protect livelihoods.
+                                    We are building the first proactive cybersecurity layer for Zambian SMEs. You won&apos;t just solve problems; you&apos;ll protect livelihoods.
                                 </p>
                             </div>
                             <div>
@@ -187,7 +184,7 @@ export default function CareersPage() {
                                     <LineChart className="w-4 h-4" /> The Telescope
                                 </h4>
                                 <p className="text-slate-400 text-sm leading-relaxed">
-                                    Through predictive analytics, we give businesses the eyes to see their future profits. It's high-impact, high-reward work.
+                                    Through predictive analytics, we give businesses the eyes to see their future profits. It&apos;s high-impact, high-reward work.
                                 </p>
                             </div>
                         </div>

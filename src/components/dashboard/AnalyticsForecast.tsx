@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { AreaChart, Area, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 import { TrendingUp, UploadCloud, Calculator, Download, FileJson } from "lucide-react";
 
 const mockSalesData = [
@@ -79,7 +79,7 @@ export default function AnalyticsForecast() {
                 <div className="space-y-4">
                     <div className="p-6 glass rounded-2xl border border-white/5 bg-blue-500/5">
                         <p className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2">Recommendation</p>
-                        <h5 className="font-bold text-white mb-2 italic">"Stock up on Inventory X in April"</h5>
+                        <h5 className="font-bold text-white mb-2 italic">&quot;Stock up on Inventory X in April&quot;</h5>
                         <p className="text-sm text-slate-400 leading-relaxed">
                             Based on historical trends and current velocity, we predict a 42% surge in demand for electronics next month.
                         </p>
