@@ -30,7 +30,7 @@ export default function Home() {
             className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-blue-500/30 text-blue-400 text-sm font-medium mb-8"
           >
             <Bot className="w-4 h-4" />
-            <span>Zambia&apos;s First AI-First Software Agency</span>
+            <span>Africanized AI Engineering & Global Intelligence</span>
           </motion.div>
 
           <motion.h1
@@ -39,8 +39,8 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8"
           >
-            Speed of <span className="text-gradient">AI</span>.<br />
-            Rooted in <span className="border-b-4 border-blue-600">Zambia</span>.
+            Agentic Speed.<br />
+            <span className="text-gradient">Continental</span> Bridge.
           </motion.h1>
 
           <motion.p
@@ -49,9 +49,8 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed"
           >
-            We don&apos;t just build code; we build <strong>Business Resilience</strong>.
-            MorleyAI provides high-speed enterprise software, AI-driven cybersecurity, and predictive analytics
-            hosted locally in Zambia for 100% legal compliance.
+            MorleyAI serves as the primary <strong>AI Service Bridge</strong> between Africa and the Global market.
+            We build high-velocity intelligence solutions that are locally compliant, secure, and ready for worldwide scale.
           </motion.p>
 
           <motion.div

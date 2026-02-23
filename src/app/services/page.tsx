@@ -7,12 +7,10 @@ import {
     ShieldCheck,
     BarChart3,
     ArrowRight,
-    CheckCircle2,
-    Brain,
-    Cpu,
-    Database
+    CheckCircle2
 } from "lucide-react";
 import SecurityEcosystem from "@/components/SecurityEcosystem";
+import AgenticPipeline from "@/components/AgenticPipeline";
 
 const services = [
     {
@@ -38,16 +36,6 @@ const services = [
     }
 ];
 
-/**
- * Services Page
- * 
- * Details the 3 core offerings of MorleyAI:
- * 1. AI Cybersecurity (The Shield)
- * 2. Advanced Analytics (The Telescope)
- * 3. SME Software Suite (The Engine)
- * 
- * Includes the 4-step "MorleyAI Methodology" for client education.
- */
 export default function ServicesPage() {
     return (
         <div className="pt-32 pb-24 min-h-screen space-y-32">
@@ -58,12 +46,13 @@ export default function ServicesPage() {
                         <motion.h1
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="text-4xl md:text-6xl font-bold mb-6"
+                            className="text-4xl md:text-6xl font-black mb-6"
                         >
-                            Agentic <span className="text-gradient">Solutions</span>
+                            The <span className="text-gradient">Strategic</span> Bridge
                         </motion.h1>
-                        <p className="text-slate-400 text-lg max-w-2xl">
-                            We combine global AI innovation with local Zambian infrastructure to deliver solutions that are fast, legal, and secure.
+                        <p className="text-slate-400 text-lg max-w-3xl leading-relaxed">
+                            MorleyAI is the technical conduit between African digital sovereignty and Global AI innovation.
+                            We build high-velocity intelligence that scales across borders while remaining rooted in local compliance.
                         </p>
                     </div>
 
@@ -109,83 +98,8 @@ export default function ServicesPage() {
             {/* Deep Security Ecosystem Section */}
             <SecurityEcosystem />
 
-            {/* Methodology Section */}
-            <section className="py-24 px-6 bg-blue-600/5 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2" />
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="text-center mb-20">
-                        <h2 className="text-4xl md:text-6xl font-black mb-4">The MorleyAI <span className="text-gradient">Methodology</span></h2>
-                        <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mb-6" />
-                        <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                            We&apos;ve re-engineered the software lifecycle for the AI age. No more &quot;wait and see&quot;—we build, secure, and scale with pinpoint precision.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
-                        {/* Visual connector line for desktop */}
-                        <div className="hidden md:block absolute top-[45%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
-
-                        {[
-                            {
-                                step: "01",
-                                name: "AI Synthesis",
-                                desc: "Autonomous agents analyze your specific business logic to generate exact architectural blueprints.",
-                                icon: Brain,
-                                color: "blue"
-                            },
-                            {
-                                step: "02",
-                                name: "Rapid Forge",
-                                desc: "Full-stack code generation using our proprietary LLM pipeline—ready for testing in 48 hours.",
-                                icon: Cpu,
-                                color: "purple"
-                            },
-                            {
-                                step: "03",
-                                name: "Local Vault",
-                                desc: "Encrypted deployment to Zambia-based VPS nodes, ensuring 100% data sovereignty and law compliance.",
-                                icon: Database,
-                                color: "blue"
-                            },
-                            {
-                                step: "04",
-                                name: "AI Sentry",
-                                desc: "Continuous automated monitoring for cyber attacks and predictive growth insights.",
-                                icon: ShieldCheck,
-                                color: "emerald"
-                            }
-                        ].map((item, idx) => (
-                            <motion.div
-                                key={item.step}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.15 }}
-                                className="group relative glass p-8 rounded-3xl border border-white/5 hover:border-blue-500/30 hover:scale-[1.02] transition-all"
-                            >
-                                <div className="mb-6 relative">
-                                    <div className={`w-14 h-14 rounded-2xl bg-${item.color}-500/10 flex items-center justify-center text-blue-500`}>
-                                        <item.icon className="w-8 h-8" />
-                                    </div>
-                                    <span className="absolute top-0 right-0 text-5xl font-black text-white/5 italic select-none">
-                                        {item.step}
-                                    </span>
-                                </div>
-                                <h4 className="text-xl font-bold mb-3 text-white">{item.name}</h4>
-                                <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                                    {item.desc}
-                                </p>
-
-                                {/* Micro-interaction dot */}
-                                <div className="mt-6 flex items-center gap-2">
-                                    <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                                    <span className="text-[10px] uppercase tracking-widest text-blue-500 font-bold">System {item.step === "04" ? "Monitoring" : "Processing"}</span>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* Agentic Pipeline Module */}
+            <AgenticPipeline />
 
             {/* Audit CTA */}
             <section className="px-6 pb-24">
