@@ -12,27 +12,28 @@ import {
     Cpu,
     Database
 } from "lucide-react";
+import SecurityEcosystem from "@/components/SecurityEcosystem";
 
 const services = [
     {
-        title: "AI Cybersecurity",
-        description: "Real-time threat detection and automatic blocking of malicious IPs. We protect your SME infrastructure 24/7.",
+        title: "Defensive Cyber Ops",
+        description: "Beyond simple firewalls. We implement AI-driven Defensive Operations (SecOps) and real-time adversary detection.",
         icon: ShieldCheck,
-        features: ["Brute Force Blocking", "SQL Injection Probe Shielding", "Local Log Sovereignty", "2025 Act Compliance"],
+        features: ["Managed Threat Hunting", "24/7 AI-Agent Monitoring", "Local Log Sovereignty", "Quantum-Resistant Encryption"],
         color: "blue"
     },
     {
-        title: "Advanced Analytics",
-        description: "Convert your raw sales data into predictive insights. Our Machine Learning models help you forecast inventory and growth.",
+        title: "Predictive Intelligence",
+        description: "Transforming big data into strategic foresight. We build ML pipelines for sales, inventory, and market trend forecasting.",
         icon: BarChart3,
-        features: ["Sales Trend Forecasting", "Inventory Prediction", "CSV/Excel Data Analysis", "Custom Business KPIs"],
+        features: ["Prophet Model Integration", "Automated KPI Generation", "Interactive Intelligence Dashboards", "Big Data Pipeline Ops"],
         color: "purple"
     },
     {
-        title: "SME Software Suite",
-        description: "Custom-built applications for your business, from POS to Inventory and HR, built in weeks with AI agents.",
+        title: "Elite Enterprise Systems",
+        description: "Mission-critical software engineered with AI velocity. From ERPs to Fintech platforms, built on Zambian ground.",
         icon: Code2,
-        features: ["Rapid Prototyping", "Full-Stack Web Apps", "Mobile Ready", "Local Zambian Hosting"],
+        features: ["High-Velocity Prototyping", "Scalable Microservices", "Zambian Compliance Ledger", "Tier-III Local Hosting"],
         color: "green"
     }
 ];
@@ -104,6 +105,9 @@ export default function ServicesPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Deep Security Ecosystem Section */}
+            <SecurityEcosystem />
 
             {/* Methodology Section */}
             <section className="py-24 px-6 bg-blue-600/5 relative overflow-hidden">

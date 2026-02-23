@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Radio, Server, Globe2, Building2, Cpu } from "lucide-react";
+import { Shield, Radio, Server, Globe2 } from "lucide-react";
 
 const partners = [
     {
@@ -62,7 +62,7 @@ export default function PartnerNetwork() {
                         Our Trusted <span className="text-gradient">Infrastructure</span> Network
                     </motion.h2>
                     <p className="text-slate-400 text-lg max-w-3xl mx-auto">
-                        MorleyAI operates on the bedrock of Zambia's most secure and reliable infrastructure providers.
+                        MorleyAI operates on the bedrock of Zambia&apos;s most secure and reliable infrastructure providers.
                         We leverage local data centers and national fiber backbones to ensure 100% data sovereignty.
                     </p>
                 </div>
