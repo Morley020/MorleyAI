@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Bot, Database, Zap, Cpu, Server, ShieldCheck, LayoutDashboard, Lock } from "lucide-react";
 import Link from "next/link";
 import TechStackMarquee from "@/components/TechStackMarquee";
+import PartnerNetwork from "@/components/PartnerNetwork";
 
 /**
  * HomePage Structure
@@ -79,36 +80,7 @@ export default function Home() {
       </section>
 
       {/* Partner Logos Section */}
-      <section className="py-10 border-b border-white/5 bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-xs font-bold text-slate-500 uppercase tracking-widest mb-8">Trusted Infrastructure Partners</p>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Partner 1: Infratel */}
-            <div className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded bg-slate-700 group-hover:bg-emerald-500 transition-colors" />
-              <span className="text-xl font-black text-slate-300 group-hover:text-white tracking-tight">INFRATEL</span>
-            </div>
-
-            {/* Partner 2: Paratus */}
-            <div className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded-full bg-slate-700 group-hover:bg-red-600 transition-colors" />
-              <span className="text-xl font-bold text-slate-300 group-hover:text-white">paratus</span>
-            </div>
-
-            {/* Partner 3: Zamtel */}
-            <div className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded bg-slate-700 group-hover:bg-green-600 transition-colors" />
-              <span className="text-xl font-extrabold text-slate-300 group-hover:text-white italic">zamtel</span>
-            </div>
-
-            {/* Partner 4: Zamnet */}
-            <div className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded-tr-xl bg-slate-700 group-hover:bg-blue-600 transition-colors" />
-              <span className="text-xl font-bold text-slate-300 group-hover:text-white">ZAMNET</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PartnerNetwork />
 
       {/* Features Grid */}
       <section className="py-24 px-6 bg-black/50">
