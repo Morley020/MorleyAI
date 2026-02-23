@@ -5,6 +5,7 @@ import { ArrowRight, Bot, Database, Zap, Cpu, Server, ShieldCheck, LayoutDashboa
 import Link from "next/link";
 import TechStackMarquee from "@/components/TechStackMarquee";
 import PartnerNetwork from "@/components/PartnerNetwork";
+import ProjectShowcase from "@/components/ProjectShowcase";
 
 /**
  * HomePage Structure
@@ -126,7 +127,10 @@ export default function Home() {
       {/* Technologies Section */}
       <TechStackMarquee />
 
-      {/* Client Portal Section */}
+      {/* Selected Works Section */}
+      <ProjectShowcase />
+
+      {/* Client Portal Preview Section */}
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none" />
 
