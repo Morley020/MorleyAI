@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { LayoutDashboard, Shield, BarChart3, Settings2, Bell } from "lucide-react";
+import { LayoutDashboard, Shield, BarChart3, Settings2, Bell, LogOut } from "lucide-react";
+import { logout } from "@/lib/auth.actions";
 import CyberMonitor from "@/components/dashboard/CyberMonitor";
 import AnalyticsForecast from "@/components/dashboard/AnalyticsForecast";
 import ComplianceReporter from "@/components/dashboard/ComplianceReporter";
@@ -33,6 +34,9 @@ export default function DashboardPage() {
                                 <p className="text-[10px] text-slate-500">Administrator</p>
                             </div>
                         </div>
+                        <button onClick={() => logout()} className="relative w-12 h-12 rounded-2xl glass border border-white/10 flex items-center justify-center hover:bg-rose-500/20 hover:text-rose-500 hover:border-rose-500/50 transition-all text-slate-300 group">
+                            <LogOut className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                        </button>
                     </div>
                 </header>
 
