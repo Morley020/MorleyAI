@@ -105,6 +105,19 @@ export default function CompliancePage() {
                             </p>
                         </div>
                     </div>
+
+                    {/* Secure Communication Addendum */}
+                    <div className="glass p-8 md:p-12 rounded-[2.5rem] border border-blue-500/10 text-center">
+                        <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mx-auto mb-6">
+                            <ShieldCheck className="w-6 h-6 text-blue-500" />
+                        </div>
+                        <h3 className="text-xl font-bold mb-4">Secure Intelligence Channel</h3>
+                        <p className="text-slate-400 text-sm leading-relaxed max-w-xl mx-auto">
+                            For highly sensitive project disclosures and Vulnerability Reporting, we maintain an end-to-end
+                            encrypted communication vault. High-stakes technical data is never transmitted over standard
+                            clearview channels.
+                        </p>
+                    </div>
                 </section>
             </div>
         </div>

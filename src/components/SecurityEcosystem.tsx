@@ -28,9 +28,9 @@ const protocols = [
         color: "rose"
     },
     {
-        title: "The Morley Academy",
-        desc: "Empowering your local team with elite cybersecurity skills. Professional-grade training tracks designed for the Zambian tech workforce.",
-        features: ["Hand-on Lab Training", "AI-Security Workshops", "SME Staff Awareness", "Certification Prep"],
+        title: "Encrypted Intelligence Ops",
+        desc: "Secure end-to-end encrypted communication for all high-stakes red-teaming and defense operations. We ensure intelligence is 100% private and protected.",
+        features: ["PGP-Encrypted Direct Comms", "Zero-Knowledge Data Vaults", "Sensitive Asset Protection", "Secure Briefing Channels"],
         icon: GraduationCap,
         color: "emerald"
     }
