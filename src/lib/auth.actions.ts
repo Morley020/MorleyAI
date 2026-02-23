@@ -6,8 +6,8 @@ import { redirect } from "next/navigation";
 // In a real application without a DB, you'd store these in an environment variable e.g. CLIENT_CREDENTIALS
 // Format could be: email:password,email:password
 const VALID_ACCOUNTS = [
-    { email: "client@morley.ai.co.zm", password: "securepassword123" },
-    { email: "admin@morley.ai.co.zm", password: "adminpassword" }
+    { email: "consult.morleyai@gmail.com", password: "securepassword123" },
+    { email: "admin@morley.ai", password: "adminpassword" }
 ];
 
 export async function login(formData: FormData) {

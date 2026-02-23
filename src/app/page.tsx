@@ -242,7 +242,7 @@ export default function Home() {
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-300">Email</label>
-                <input type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="chanda@business.zm" required />
+                <input type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="your@email.com" required />
               </div>
             </div>
             <div className="space-y-2">
