@@ -30,6 +30,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "The Lab", href: "/#lab" },
+    { name: "Insights", href: "/insights" },
     { name: "Services", href: "/services" },
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
