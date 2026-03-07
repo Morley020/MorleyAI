@@ -45,7 +45,7 @@ export default function InsightsPage() {
                         transition={{ delay: 0.1 }}
                         className="text-xl text-slate-400 max-w-2xl leading-relaxed"
                     >
-                        The intersection of elite Python engineering, cybersecurity protocols, and autonomous AI strategy in the Zambian market.
+                        Navigating the frontier of elite Python engineering, cybersecurity protocols, and autonomous AI strategy. We deliver the intelligence required to dominate the Zambian industrial landscape.
                     </motion.p>
                 </div>
 
@@ -90,18 +90,18 @@ export default function InsightsPage() {
                 <div className="mt-40 pt-20 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-12 opacity-50">
                     <div className="space-y-4">
                         <div className="w-12 h-1 bg-blue-500" />
-                        <h4 className="font-bold text-white text-sm uppercase">Resilience-First</h4>
-                        <p className="text-xs text-slate-500 leading-relaxed">Our insights focus on building systems that survive and evolve within infrastructure-constrained environments.</p>
+                        <h4 className="font-bold text-white text-sm uppercase">Infrastructure Resilience</h4>
+                        <p className="text-xs text-slate-500 leading-relaxed">We architect systems engineered to survive and evolve within high-constraint environments, ensuring zero-downtime operations for critical Zambian enterprise.</p>
                     </div>
                     <div className="space-y-4">
                         <div className="w-12 h-1 bg-emerald-500" />
-                        <h4 className="font-bold text-white text-sm uppercase">Data Sovereignty</h4>
-                        <p className="text-xs text-slate-500 leading-relaxed">Analyzing the shift towards local data hosting and its competitive advantage for Zambian business.</p>
+                        <h4 className="font-bold text-white text-sm uppercase">Sovereign Data Protocols</h4>
+                        <p className="text-xs text-slate-500 leading-relaxed">Analyzing the transition to localized hosting and its role in securing Zambia&apos;s strategic data assets against global volatility.</p>
                     </div>
                     <div className="space-y-4">
                         <div className="w-12 h-1 bg-purple-500" />
-                        <h4 className="font-bold text-white text-sm uppercase">Agentic Future</h4>
-                        <p className="text-xs text-slate-500 leading-relaxed">Charting the transition from traditional software to autonomous AI agent ecosystems.</p>
+                        <h4 className="font-bold text-white text-sm uppercase">Agentic Ecosystems</h4>
+                        <p className="text-xs text-slate-500 leading-relaxed">Charting the evolution from static software to autonomous AI agent networks capable of orchestrating entire industrial workflows.</p>
                     </div>
                 </div>
             </div>

@@ -13,25 +13,25 @@ import Link from "next/link";
 export default function ThoughtLeadership() {
     const insights = [
         {
-            title: "Sovereign Intelligence: Why Zambia Needs Locally-Hosted AI",
-            excerpt: "As data becomes the new gold, local infrastructure isn't just a technical preference—it's a requirement for national security and economic resilience.",
+            title: "The Data Sovereignty Manifesto: Why Zambia Cannot Outsource its Intelligence",
+            excerpt: "Dependency on cross-border cloud providers introduces latency and legal vulnerability. We break down the architectural blueprint for a localized, high-resiliency AI backbone that keeps Zambian data within sovereign borders.",
             category: "Strategic Infrastructure",
-            readTime: "8 min read",
-            date: "March 5, 2026"
+            readTime: "10 min read",
+            date: "March 6, 2026"
         },
         {
-            title: "Beyond the API: Engineering Custom Python Agents for Zambian Mining",
-            excerpt: "Generic LLMs fail when they meet local industrial complexity. How we built autonomous agents that understand mining workflows in the Copperbelt.",
-            category: "Industrial AI",
-            readTime: "12 min read",
-            date: "Feb 28, 2026"
+            title: "Agentic Revolution: Moving Beyond Chatbots to Autonomous Industrial Operations",
+            excerpt: "The next era of Zambian productivity isn't about asking an AI a question; it's about agents that execute tasks. Explore how MorleyAI is deploying autonomous Python agents to orchestrate heavy logistics.",
+            category: "Agentic Engineering",
+            readTime: "14 min read",
+            date: "March 1, 2026"
         },
         {
-            title: "Data Protection Act No. 3: A Checklist for Tech Founders",
-            excerpt: "Navigating Zambia's 2021 Data Protection implementation doesn't have to be a blocker. A developer's guide to compliant architecture.",
-            category: "Compliance",
-            readTime: "6 min read",
-            date: "Feb 15, 2026"
+            title: "Fintech Fortification: Preemptive Fraud Detection in the Mobile Money Era",
+            excerpt: "With the surge in Zambian mobile transactions, reactive security is obsolete. We detail our proprietary ML models that detect fraudulent patterns before a single Kwacha is compromised.",
+            category: "Cyber-Defense",
+            readTime: "9 min read",
+            date: "Feb 22, 2026"
         }
     ];
 
