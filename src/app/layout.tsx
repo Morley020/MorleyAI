@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import { Inter, Orbitron } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-geist-sans" });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
 
 export const metadata: Metadata = {
-  title: "MorleyAI | Local Zambian AI Software Agency",
-  description: "Next-generation software development agency based in Zambia. High-speed AI development with local hosting compliance.",
-  keywords: ["AI Zambia", "Software Development Lusaka", "Data Protection Act Zambia", "MorleyAI", "Zambian Tech"],
+  title: "MorleyAI | Engineering Africa's Intelligence",
+  description: "Next-generation Python engineering agency based in Zambia. High-speed AI development with local resilience and high-performance mission-critical systems.",
+  keywords: ["AI Zambia", "Python Engineering Lusaka", "Data Protection Act Zambia", "MorleyAI", "Zambian Tech", "AuraStream"],
 };
 
 /**
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${orbitron.variable} antialiased min-h-screen bg-mesh`}>
         <Navbar />
         <main>{children}</main>
+        <WhatsAppButton />
         <footer className="py-12 border-t border-white/5 glass">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>

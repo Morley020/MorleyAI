@@ -1,12 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Bot, Cpu, Server, ShieldCheck, LayoutDashboard, Binary, Activity, Lock as LockIcon } from "lucide-react";
+import { ArrowRight, Bot, Cpu, Server, LayoutDashboard, Binary, Lock as LockIcon, Globe, Smartphone } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import TechStackMarquee from "@/components/TechStackMarquee";
 import PartnerNetwork from "@/components/PartnerNetwork";
 import ProjectShowcase from "@/components/ProjectShowcase";
 import SectorExpertise from "@/components/SectorExpertise";
+import PricingCalculator from "@/components/PricingCalculator";
+import ContactForm from "@/components/ContactForm";
 
 /**
  * HomePage Structure
@@ -18,6 +21,8 @@ import SectorExpertise from "@/components/SectorExpertise";
  * 5. Contact: Lead capture form.
  */
 export default function Home() {
+  const [selectedService, setSelectedService] = useState("");
+
   return (
     <div className="relative pt-20">
       {/* Hero Section */}
@@ -32,7 +37,7 @@ export default function Home() {
             className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-blue-500/30 text-blue-400 text-sm font-medium mb-8"
           >
             <Bot className="w-4 h-4" />
-            <span>Africanized AI Engineering & Global Intelligence</span>
+            <span>High-Performance Engineering & Python Intelligence</span>
           </motion.div>
 
           <motion.h1
@@ -41,8 +46,8 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8"
           >
-            Agentic Speed.<br />
-            <span className="text-gradient">Continental</span> Bridge.
+            Engineering the<br />
+            <span className="text-gradient">Intelligence</span> of Africa.
           </motion.h1>
 
           <motion.p
@@ -51,8 +56,8 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed"
           >
-            MorleyAI serves as the primary <strong>AI Service Bridge</strong> between Africa and the Global market.
-            We build high-velocity intelligence solutions that are locally compliant, secure, and ready for worldwide scale.
+            MorleyAI builds mission-critical systems powered by autonomous Python agents.
+            From Zambian financial infrastructure to enterprise-scale NGOs, we engineer resilience into every line of code.
           </motion.p>
 
           <motion.div
@@ -62,11 +67,11 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Link href="/services" className="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all flex items-center gap-2 group">
-              Start Building
+              Start Engineering
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/compliance" className="px-8 py-4 rounded-xl glass border border-white/10 text-white font-bold hover:bg-white/5 transition-all">
-              View Compliance
+            <Link href="/#pricing" className="px-8 py-4 rounded-xl glass border border-white/10 text-white font-bold hover:bg-white/5 transition-all">
+              View Disruptor Pricing
             </Link>
           </motion.div>
         </div>
@@ -86,45 +91,91 @@ export default function Home() {
       {/* Sector Expertise Section */}
       <SectorExpertise />
 
-      {/* Features Grid */}
-      <section className="py-24 px-6 bg-black/50">
+      {/* Disruptor Pricing Section */}
+      <section id="pricing" className="py-24 px-6 bg-black/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">The MorleyAI Advantage</h2>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20 mb-4"
+            >
+              The 5% Price Disruptor
+            </motion.div>
+            <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter">Premium Engineering. <span className="text-blue-500">Unbeatable Value.</span></h2>
             <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-[2rem] glass hover:border-blue-500/30 transition-all border border-white/5">
-              <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20">
-                <Binary className="text-blue-500 w-8 h-8" />
+            {/* TIER 1: WEB */}
+            <div className="p-8 rounded-[2.5rem] glass hover:border-blue-500/30 transition-all border border-white/5 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Globe className="w-20 h-20 text-blue-500" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Software Engineering</h3>
-              <p className="text-slate-400 leading-relaxed text-sm">
-                Bespoke enterprise architecture built with AI velocity. We specialize in high-scale ERPs, Fintech, and custom organizational systems.
-              </p>
+              <p className="text-blue-400 font-bold text-xs mb-2">ESSENTIAL PRESENCE</p>
+              <h3 className="text-3xl font-black mb-4 text-white">Web Design</h3>
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className="text-4xl font-black text-white">K5,000</span>
+                <span className="text-slate-500 text-sm">/ project</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {["Elite Visual Design", "SEO Optimized", "Mobile First", "AI-Powered Copywriting"].map(item => (
+                  <li key={item} className="flex items-center gap-2 text-sm text-slate-400">
+                    <div className="w-1 h-1 rounded-full bg-blue-500" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="#contact" className="block w-full py-4 text-center glass border border-blue-500/20 rounded-2xl font-bold text-blue-400 hover:bg-blue-500 hover:text-white transition-all">Start Project</Link>
             </div>
 
-            <div className="p-8 rounded-[2rem] glass hover:border-rose-500/30 transition-all border border-white/5">
-              <div className="w-14 h-14 bg-rose-500/10 rounded-2xl flex items-center justify-center mb-6 border border-rose-500/20">
-                <ShieldCheck className="text-rose-500 w-8 h-8" />
+            {/* TIER 2: SYSTEMS */}
+            <div className="p-8 rounded-[2.5rem] glass border-blue-500/40 border bg-blue-500/5 relative overflow-hidden group scale-105 z-10">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Binary className="w-20 h-20 text-blue-500" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Cyber Security</h3>
-              <p className="text-slate-400 leading-relaxed text-sm">
-                Elite offensive and defensive operations. We ensure Act No. 3 compliance and 100% data sovereignty through local Zambian hosting.
-              </p>
+              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-500 text-white text-[10px] font-black uppercase">Most Popular</div>
+              <p className="text-blue-400 font-bold text-xs mb-2 mt-6">ENTERPRISE CORE</p>
+              <h3 className="text-3xl font-black mb-4 text-white">Business Systems</h3>
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className="text-4xl font-black text-white">K25,000</span>
+                <span className="text-slate-500 text-sm">/ suite</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {["HR & Payroll Intelligence", "NGO Strategic Information", "Education Management", "Automated Compliance Audits"].map(item => (
+                  <li key={item} className="flex items-center gap-2 text-sm text-slate-300 font-medium">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="#contact" className="block w-full py-4 text-center bg-blue-600 rounded-2xl font-bold text-white hover:bg-blue-500 transition-all shadow-xl shadow-blue-500/20">Engineering Consult</Link>
             </div>
 
-            <div className="p-8 rounded-[2rem] glass hover:border-emerald-500/30 transition-all border border-white/5">
-              <div className="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 border border-emerald-500/20">
-                <Activity className="text-emerald-500 w-8 h-8" />
+            {/* TIER 3: MOBILE */}
+            <div className="p-8 rounded-[2.5rem] glass hover:border-blue-500/30 transition-all border border-white/5 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Smartphone className="w-20 h-20 text-blue-500" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Monitoring & Evaluation</h3>
-              <p className="text-slate-400 leading-relaxed text-sm">
-                Data-driven insight frameworks. We automate organizational reporting and impact analysis with advanced predictive ML agents.
-              </p>
+              <p className="text-blue-400 font-bold text-xs mb-2">REVOLUTIONARY APPS</p>
+              <h3 className="text-3xl font-black mb-4 text-white">Mobile Apps</h3>
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className="text-4xl font-black text-white">K40,000</span>
+                <span className="text-slate-500 text-sm">/ initial dev</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {["iOS & Android Engineering", "Mobile Money Integration", "Real-time Agentic Logic", "Offline-First Data Capture"].map(item => (
+                  <li key={item} className="flex items-center gap-2 text-sm text-slate-400">
+                    <div className="w-1 h-1 rounded-full bg-blue-500" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="#contact" className="block w-full py-4 text-center glass border border-blue-500/20 rounded-2xl font-bold text-blue-400 hover:bg-blue-500 hover:text-white transition-all">Start Project</Link>
             </div>
           </div>
+
+          <PricingCalculator onSelect={(s) => setSelectedService(s)} />
         </div>
       </section>
 
@@ -234,25 +285,7 @@ export default function Home() {
             <p className="text-slate-400 mt-2">Ready to transform your business with Zambian AI?</p>
           </div>
 
-          <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Lead captured! We will contact you shortly."); }}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-300">Name</label>
-                <input type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Chanda Musonda" required />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-300">Email</label>
-                <input type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="your@email.com" required />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-300">Your Vision</label>
-              <textarea className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors h-32" placeholder="Tell us about the software your business needs..." required />
-            </div>
-            <button type="submit" className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/20">
-              Send Lead
-            </button>
-          </form>
+          <ContactForm preSelectedService={selectedService} />
         </div>
       </section>
     </div>

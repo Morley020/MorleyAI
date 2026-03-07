@@ -29,11 +29,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About Us", href: "/about" },
+    { name: "The Lab", href: "/#lab" },
     { name: "Services", href: "/services" },
-    { name: "Compliance", href: "/compliance" },
+    { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Compliance", href: "/compliance" },
   ];
 
   return (
