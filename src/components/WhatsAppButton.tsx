@@ -10,7 +10,7 @@ import { MessageCircle } from "lucide-react";
  * Matches competitor accessibility (CairoAI) but with a more premium, engineering aesthetic.
  */
 export default function WhatsAppButton() {
-    const phoneNumber = "260970000000"; // Placeholder: User should update with their business number
+    const phoneNumber = "254755545443";
     const message = "Hello MorleyAI, I'm interested in starting a Python Engineering project. I'd like to discuss the 5% Advantage pricing.";
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
