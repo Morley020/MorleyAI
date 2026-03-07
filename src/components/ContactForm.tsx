@@ -15,9 +15,14 @@ interface ContactFormProps {
  * Includes tactical service selection and intelligent lead routing logic.
  */
 export default function ContactForm({ preSelectedService }: ContactFormProps) {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [requirements, setRequirements] = useState("");
     const [service, setService] = useState(preSelectedService || "");
     const [prevService, setPrevService] = useState(preSelectedService);
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const phoneNumber = "254755545443"; // Lead Engineer WhatsApp
 
     // Sync with external selections (e.g., from the calculator) without using useEffect
     if (preSelectedService !== prevService) {
@@ -27,7 +32,20 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // In a real scenario, send data to backend/Supabase/EmailJS
+
+        // Construct the WhatsApp message
+        const message = `*MorleyAI Strategic Lead*%0A%0A` +
+            `*Entity:* ${name}%0A` +
+            `*Email:* ${email}%0A` +
+            `*Selected Tier:* ${service}%0A` +
+            `*Requirements:* ${requirements}%0A%0A` +
+            `_Sent via MorleyAI Resilient Protocol_`;
+
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, "_blank");
+
         setIsSubmitted(true);
     };
 
@@ -42,7 +60,7 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
                     <CheckCircle2 className="w-10 h-10 text-emerald-500" />
                 </div>
                 <h3 className="text-2xl font-black text-white mb-2">Transmission Secure</h3>
-                <p className="text-slate-400">Your mission-critical requirements have been captured. A lead engineer will contact you within 5 minutes.</p>
+                <p className="text-slate-400">Your mission-critical requirements have been captured. A lead engineer will contact you via WhatsApp shortly to finalize the deployment.</p>
             </motion.div>
         );
     }
@@ -55,6 +73,8 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
                     <input
                         type="text"
                         required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         placeholder="Chanda Musonda"
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:border-blue-500 outline-none transition-all placeholder:text-slate-700"
                     />
@@ -64,6 +84,8 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
                     <input
                         type="email"
                         required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="your@email.com"
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:border-blue-500 outline-none transition-all placeholder:text-slate-700"
                     />
@@ -89,6 +111,8 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Mission Requirements</label>
                 <textarea
                     required
+                    value={requirements}
+                    onChange={(e) => setRequirements(e.target.value)}
                     placeholder="Briefly describe your high-performance software vision..."
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:border-blue-500 outline-none transition-all h-32 placeholder:text-slate-700"
                 ></textarea>
