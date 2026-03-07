@@ -101,6 +101,52 @@ export default function ServicesPage() {
             {/* Agentic Pipeline Module */}
             <AgenticPipeline />
 
+            {/* Legal & Compliance Section */}
+            <section className="px-6">
+                <div className="max-w-7xl mx-auto">
+                    <div className="glass p-12 md:p-20 rounded-[4rem] border border-white/5 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-8 opacity-5">
+                            <ShieldCheck className="w-64 h-64 text-blue-500" />
+                        </div>
+
+                        <div className="relative z-10">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-bold border border-blue-500/20 mb-8">
+                                <span>Zambia Data Protection Act No. 3 of 2021</span>
+                            </div>
+                            <h2 className="text-4xl md:text-5xl font-black mb-12">Regulatory <span className="text-gradient">Precision</span>.</h2>
+
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                {[
+                                    {
+                                        title: "Data Sovereignty",
+                                        desc: "Section 48 requires that all personal data categorized as critical by the Minister must be stored on a server located in Zambia.",
+                                        tag: "Section 48"
+                                    },
+                                    {
+                                        title: "Consent Management",
+                                        desc: "Mandatory mechanisms for obtaining and documenting informed consent before processing personal data.",
+                                        tag: "Part III"
+                                    },
+                                    {
+                                        title: "Data Subject Rights",
+                                        desc: "Granting Zambian citizens the right to access, rectify, and erase their personal data stored by systems.",
+                                        tag: "Part IV"
+                                    }
+                                ].map((req) => (
+                                    <div key={req.title} className="p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-blue-500/20 transition-all">
+                                        <div className="flex justify-between items-start mb-4">
+                                            <h4 className="font-bold text-white text-xl">{req.title}</h4>
+                                            <span className="text-[10px] font-mono px-2 py-1 bg-blue-500/20 text-blue-400 rounded border border-blue-500/30 uppercase">{req.tag}</span>
+                                        </div>
+                                        <p className="text-slate-400 text-sm leading-relaxed">{req.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Audit CTA */}
             <section className="px-6 pb-24">
                 <motion.div

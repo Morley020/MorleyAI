@@ -55,7 +55,7 @@ export default function LoginPage() {
                                 <input
                                     name="email"
                                     type="email"
-                                    placeholder="consult.morleyai@gmail.com"
+                                    placeholder="client@example.com"
                                     className="w-full bg-black/20 border border-white/10 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:border-blue-500 transition-colors text-white"
                                     required
                                 />
@@ -69,7 +69,7 @@ export default function LoginPage() {
                                 <input
                                     name="password"
                                     type="password"
-                                    placeholder="••••••••••"
+                                    placeholder="MAI-XXXX-XXXX"
                                     className="w-full bg-black/20 border border-white/10 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:border-blue-500 transition-colors text-white"
                                     required
                                 />

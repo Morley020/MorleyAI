@@ -250,7 +250,7 @@ export default function ProjectDeepDive() {
                         <div className="mt-16 pt-8 border-t border-white/5">
                             <h3 className="text-xl font-black text-white mb-6">Virtual Portal Preview</h3>
                             <Link
-                                href="/lab/lumikiza/advisory-hub"
+                                href="/projects/lumikiza/advisory-hub"
                                 className="group relative block glass p-8 rounded-[2.5rem] border border-emerald-500/20 bg-emerald-500/5 overflow-hidden hover:border-emerald-500/40 transition-all text-center lg:text-left"
                             >
                                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">

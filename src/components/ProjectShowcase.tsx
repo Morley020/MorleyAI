@@ -119,7 +119,7 @@ const projects = [
 
 export default function ProjectShowcase() {
     return (
-        <section id="lab" className="py-24 px-6 relative bg-white/[0.01]">
+        <section id="projects" className="py-24 px-6 relative bg-white/[0.01]">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
                     <div className="max-w-2xl">
@@ -130,10 +130,10 @@ export default function ProjectShowcase() {
                             className="flex items-center gap-2 text-blue-500 font-black text-sm tracking-[0.3em] uppercase mb-4"
                         >
                             <Terminal className="w-4 h-4" />
-                            Python Innovation Lab
+                            Project Intelligence
                         </motion.div>
                         <h2 className="text-4xl md:text-6xl font-black text-white">
-                            The Intelligence <span className="text-gradient">Files</span>
+                            Engineering <span className="text-gradient">Projects</span>
                         </h2>
                     </div>
                     <p className="text-slate-400 text-lg md:text-right max-w-sm">
@@ -194,7 +194,7 @@ export default function ProjectShowcase() {
                                     </div>
                                 </div>
                                 <Link
-                                    href={`/lab/${project.slug}`}
+                                    href={`/projects/${project.slug}`}
                                     className="px-6 py-2.5 rounded-xl border border-white/10 flex items-center gap-2 text-xs font-bold text-white group-hover:bg-blue-600 group-hover:border-blue-600 transition-all font-mono"
                                 >
                                     EXECUTE
