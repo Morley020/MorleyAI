@@ -51,7 +51,7 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
         <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                    <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Entity / Name</projectsel>
+                    <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Entity / Name</label>
                     <input
                         type="text"
                         required
@@ -60,7 +60,7 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
                     />
                 </div>
                 <div className="space-y-2">
-                    <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Secure Email</projectsel>
+                    <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Secure Email</label>
                     <input
                         type="email"
                         required
@@ -71,7 +71,7 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
             </div>
 
             <div className="space-y-2">
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Selected Disruptor Tier</projectsel>
+                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Selected Disruptor Tier</label>
                 <select
                     value={service}
                     onChange={(e) => setService(e.target.value)}
@@ -86,7 +86,7 @@ export default function ContactForm({ preSelectedService }: ContactFormProps) {
             </div>
 
             <div className="space-y-2">
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Mission Requirements</projectsel>
+                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Mission Requirements</label>
                 <textarea
                     required
                     placeholder="Briefly describe your high-performance software vision..."
