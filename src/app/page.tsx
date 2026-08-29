@@ -10,6 +10,7 @@ import ProjectShowcase from "@/components/ProjectShowcase";
 import SectorExpertise from "@/components/SectorExpertise";
 import PricingCalculator from "@/components/PricingCalculator";
 import ContactForm from "@/components/ContactForm";
+import ProductShowcase from "@/components/ProductShowcase";
 
 /**
  * HomePage Structure
@@ -90,6 +91,9 @@ export default function Home() {
 
       {/* Sector Expertise Section */}
       <SectorExpertise />
+
+      {/* Products Section */}
+      <ProductShowcase />
 
       {/* Disruptor Pricing Section */}
       <section id="pricing" className="py-24 px-6 bg-black/50">

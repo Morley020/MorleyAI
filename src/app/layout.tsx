@@ -10,8 +10,8 @@ const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
 
 export const metadata: Metadata = {
   title: "MorleyAI | Engineering Africa's Intelligence",
-  description: "Next-generation Python engineering agency based in Zambia. High-speed AI development with local resilience and high-performance mission-critical systems.",
-  keywords: ["AI Zambia", "Python Engineering Lusaka", "Data Protection Act Zambia", "MorleyAI", "Zambian Tech", "AuraStream"],
+  description: "MorleyAI builds resilient AI products and mission-critical software systems for Africa, from Zambian enterprise platforms to field-ready tools like Nyoniline.",
+  keywords: ["AI Zambia", "Python Engineering Lusaka", "Data Protection Act Zambia", "MorleyAI", "Zambian Tech", "Nyoniline", "Lumikiza"],
 };
 
 /**
@@ -47,6 +47,7 @@ export default function RootLayout({
                 <li><Link href="/" className="hover:text-blue-500 transition-colors">Home</Link></li>
                 <li><Link href="/about" className="hover:text-blue-500 transition-colors">About Us</Link></li>
                 <li><Link href="/services" className="hover:text-blue-500 transition-colors">Services</Link></li>
+                <li><Link href="/products" className="hover:text-blue-500 transition-colors">Products</Link></li>
                 <li><Link href="/#projects" className="hover:text-blue-500 transition-colors">Projects</Link></li>
                 <li><Link href="/insights" className="hover:text-blue-500 transition-colors">Insights</Link></li>
                 <li><Link href="/careers" className="hover:text-blue-500 transition-colors">Careers</Link></li>

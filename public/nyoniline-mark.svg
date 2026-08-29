@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title desc">
+  <title id="title">Nyoniline First Light mark</title>
+  <desc id="desc">A rising bird arc with a gold sun and terracotta wingtip over a horizon.</desc>
+  <defs>
+    <radialGradient id="bgGrad" cx="80%" cy="15%" r="75%">
+      <stop offset="0%" stop-color="#26406B" />
+      <stop offset="55%" stop-color="#1B2A4A" />
+      <stop offset="100%" stop-color="#12203A" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <line x1="92" y1="368" x2="420" y2="368" stroke="#E8A93B" stroke-width="10" stroke-linecap="round" opacity="0.35" />
+  <path d="M102 338 C154 338 174 298 194 258 C220 208 246 158 296 138 C338 121 378 133 404 158" fill="none" stroke="#FBF3E7" stroke-width="26" stroke-linecap="round" />
+  <path d="M296 138 C296 138 338 118 378 128 C358 158 332 168 296 168 C296 158 296 148 296 138 Z" fill="#C2571A" />
+  <line x1="404" y1="158" x2="440" y2="104" stroke="#C2571A" stroke-width="13" stroke-linecap="round" />
+  <line x1="404" y1="158" x2="472" y2="144" stroke="#C2571A" stroke-width="13" stroke-linecap="round" />
+  <line x1="404" y1="158" x2="450" y2="200" stroke="#C2571A" stroke-width="13" stroke-linecap="round" />
+  <circle cx="404" cy="158" r="22" fill="#E8A93B" />
+</svg>
