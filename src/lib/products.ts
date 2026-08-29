@@ -1,4 +1,4 @@
-import { Activity, Bot, Sprout } from "lucide-react";
+import { Bot, Sprout } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export type ProductStatus = "IN ACTIVE BUILD" | "IN DEVELOPMENT";
@@ -46,27 +46,6 @@ export const products: Product[] = [
     impact: "Operational clarity from coop to market",
     repoUrl: "https://github.com/Morley020/nyoniline",
     href: "/products/nyoniline",
-  },
-  {
-    slug: "service-watch",
-    name: "Zambia Service Watch",
-    eyebrow: "MORLEYAI PRODUCT / PUBLIC SERVICE INTELLIGENCE",
-    tagline: "A clearer signal for public service delivery.",
-    description:
-      "A MorleyAI monitoring product for structured reporting, multi-tenant oversight, and automated signals across public service workflows in Zambia.",
-    category: "Public Service Monitoring",
-    status: "IN DEVELOPMENT",
-    icon: Activity,
-    accent: "blue",
-    capabilities: [
-      "Structured service-delivery reporting",
-      "Multi-tenant monitoring workflows",
-      "Automated oversight signals",
-      "Executive visibility across service areas",
-    ],
-    stack: ["Python", "Monitoring", "Bot Simulation", "Multi-Tenant"],
-    impact: "More visible public service performance",
-    href: "/projects/service-watch",
   },
 ];
 
