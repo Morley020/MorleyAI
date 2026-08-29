@@ -1,0 +1,536 @@
+diff --git a/src/app/products/page.tsx b/src/app/products/page.tsx
+index 61a1a8f..0320572 100644
+--- a/src/app/products/page.tsx
++++ b/src/app/products/page.tsx
+@@ -16,7 +16,7 @@ export default function ProductsPage() {
+             <Leaf className="h-4 w-4" /> MorleyAI products
+           </div>
+           <h1 className="mt-8 text-5xl font-black leading-[0.94] tracking-tight text-white md:text-8xl">Useful intelligence, <span className="text-gradient">shipped.</span></h1>
+-          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-slate-400">We build focused products for the real conditions of African businesses, institutions, and communities. Each one starts with a local problem and earns its way into a wider system.</p>
++          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-slate-400">Products are MorleyAI-owned systems that we are developing for repeatable use and long-term adoption. Client-owned products and completed commissioned work are documented separately in our executed project portfolio.</p>
+         </div>
+ 
+         <div className="mt-20 space-y-8">
+@@ -61,7 +61,7 @@ export default function ProductsPage() {
+         </div>
+ 
+         <div className="mt-12 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-center md:p-12">
+-          <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Next product / your problem</p>
++          <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Next MorleyAI product / your problem</p>
+           <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-black text-white md:text-5xl">Have a system that should exist?</h2>
+           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-slate-400">Bring us the workflow, the constraint, or the opportunity. We will help you turn it into a product people can depend on.</p>
+           <Link href="/#contact" className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-5 py-3 text-sm font-black text-white transition-colors hover:bg-blue-500">Start a build <ArrowUpRight className="h-4 w-4" /></Link>
+diff --git a/src/components/ProductShowcase.tsx b/src/components/ProductShowcase.tsx
+index c71e554..930cd9c 100644
+--- a/src/components/ProductShowcase.tsx
++++ b/src/components/ProductShowcase.tsx
+@@ -79,7 +79,7 @@ function ProductTelemetry({ product }: { product: (typeof products)[number] }) {
+ }
+ 
+ export default function ProductShowcase() {
+-  const [featured, secondary] = products;
++  const featured = products[0];
+   const featuredAccent = accentStyles[featured.accent];
+   const FeaturedIcon = featured.icon;
+ 
+@@ -97,11 +97,11 @@ export default function ProductShowcase() {
+               From intelligence <span className="text-gradient">to impact.</span>
+             </h2>
+             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-400">
+-              MorleyAI turns complex local problems into products people can use every day. Explore the systems we are building for Africa's next operating layer.
++              Products are MorleyAI-owned systems we are taking from insight to adoption. For completed client and commissioned work, explore our executed project files.
+             </p>
+           </div>
+-          <Link href="/about" className="group inline-flex shrink-0 items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-slate-400 transition-colors hover:text-white">
+-            View the studio <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
++          <Link href="/#projects" className="group inline-flex shrink-0 items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-slate-400 transition-colors hover:text-white">
++            View executed projects <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+           </Link>
+         </div>
+ 
+@@ -156,12 +156,12 @@ export default function ProductShowcase() {
+         </motion.div>
+ 
+         <div className="mt-8 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-10">
+-            <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">{secondary.status}</p>
+-            <h3 className="mt-4 text-3xl font-black text-white">{secondary.name}</h3>
+-            <p className="mt-4 leading-relaxed text-slate-400">{secondary.description}</p>
+-            <Link href={secondary.href} className="group mt-8 inline-flex items-center gap-2 text-sm font-bold text-blue-300">
+-              Read the case file <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
++          <div className="rounded-[2rem] border border-blue-300/20 bg-blue-300/[0.05] p-8 md:p-10">
++            <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-blue-300">Executed project files</p>
++            <h3 className="mt-4 text-3xl font-black text-white">Built for clients. Delivered in the real world.</h3>
++            <p className="mt-4 leading-relaxed text-slate-400">Client products, delivered websites, pending deployments, and research prototypes are organized in the executed project portfolio, with ownership and delivery status made explicit.</p>
++            <Link href="/#projects" className="group mt-8 inline-flex items-center gap-2 text-sm font-bold text-blue-300">
++              Browse project files <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+             </Link>
+           </div>
+           <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 sm:grid-cols-2 md:grid-cols-4 md:p-8">
+diff --git a/src/components/ProjectShowcase.tsx b/src/components/ProjectShowcase.tsx
+index 30f7ba4..84816e6 100644
+--- a/src/components/ProjectShowcase.tsx
++++ b/src/components/ProjectShowcase.tsx
+@@ -1,222 +1,173 @@
+ "use client";
+ 
+ import { motion } from "framer-motion";
+-import { ArrowRight, Shield, Globe, Terminal, Binary, Activity, LayoutDashboard, Heart, Lock as LockIcon, Briefcase } from "lucide-react";
++import { ArrowRight, Bot, CheckCircle2, Clock3, Code2, ExternalLink, FlaskConical, Globe, HeartPulse, LockKeyhole, Rocket, Sprout, Users } from "lucide-react";
+ import Link from "next/link";
+ 
+-const projects = [
+-    {
+-        slug: "lumikiza",
+-        title: "Lumikiza Zambia",
+-        category: "Enterprise Advisory Platform",
+-        description: "A high-impact digital ecosystem for Whitewood MS, connecting Zambian entrepreneurs with elite business advisors through intelligent matching and session orchestration.",
+-        tech: ["Next.js", "Matching Algorithm", "Zambian VPS"],
+-        impact: "SME Growth Accelerator",
+-        icon: Shield,
+-        color: "blue"
+-    },
+-    {
+-        slug: "cdf-dashboard",
+-        title: "CDF Dashboard",
+-        category: "Governance & Accountability",
+-        description: "A national accountability prototype utilizing Sankey diagrams and executive radar charts to track Constituency Development Fund allocation and performance across Zambia.",
+-        tech: ["Python", "Plotly", "Data Analysis"],
+-        impact: "Transparent Resource Tracking",
+-        icon: LayoutDashboard,
+-        color: "emerald"
+-    },
+-    {
+-        slug: "service-watch",
+-        title: "Zambia Service Watch",
+-        category: "Public Service Monitoring",
+-        description: "A multi-tenant system with backend bot simulators and real-time frontend monitoring to track public service delivery and accountability in Zambia.",
+-        tech: ["Python", "Docker", "Bot Simulation"],
+-        impact: "Automated Oversight",
+-        icon: Activity,
+-        color: "purple"
+-    },
+-    {
+-        slug: "mat-tracker",
+-        title: "UTH MAT Tracker",
+-        category: "Health-Tech Infrastructure",
+-        description: "A mission-critical prototype for UTH to track Medication-Assisted Treatment (MAT) resources and patient records of change with high precision.",
+-        tech: ["Python", "Resource Tracking", "Health-Act Ready"],
+-        impact: "Critical Care Logistics",
+-        icon: Heart,
+-        color: "rose"
+-    },
+-    {
+-        slug: "fraud-detection",
+-        title: "ML Fraud Detection",
+-        category: "Cybersecurity & Fintech",
+-        description: "An advanced machine learning suite using 2023 financial datasets to detect credit card fraud with high-precision predictive modeling.",
+-        tech: ["Python", "Scikit-Learn", "Predictive AI"],
+-        impact: "Financial Resilience",
+-        icon: LockIcon,
+-        color: "amber"
+-    },
+-    {
+-        slug: "latu-foundation",
+-        title: "Latu Foundation",
+-        category: "NGO Ecosystem",
+-        description: "A sophisticated platform developed for LatuFoundation to manage community impact projects and stakeholder engagement across Zambia.",
+-        tech: ["Next.js", "Platform Engineering", "Cloud Infrastructure"],
+-        impact: "Local Impact Scale",
+-        icon: Globe,
+-        color: "sky"
+-    },
+-    {
+-        slug: "ollie-osg",
+-        title: "Ollie's OSG",
+-        category: "Executive Strategy",
+-        description: "A premium, high-impact branding and digital strategy portal for Ollie Strategic Group, reflecting elite leadership and strategic consulting capabilities.",
+-        tech: ["Premium UX", "Digital Strategy", "Brand Engineering"],
+-        impact: "Elite Market Presence",
+-        icon: Briefcase,
+-        color: "indigo"
+-    },
+-    {
+-        slug: "aurastream",
+-        title: "AuraStream",
+-        category: "Autonomous AI Engineering",
+-        description: "An intelligent autonomous agent ecosystem that generates high-fidelity products, marketing content, and strategic intelligence logs in real-time.",
+-        tech: ["Python", "OpenAI API", "Agentic Logic"],
+-        impact: "Zero-Human Input Workflow",
+-        icon: Shield,
+-        color: "blue"
+-    },
+-    {
+-        slug: "hrc-web-app",
+-        title: "HRC Web App",
+-        category: "Enterprise NGO Infrastructure",
+-        description: "A mission-critical system for the Human Rights Commission, automating strategic information mapping and case tracking for national-level compliance.",
+-        tech: ["Next.js", "Python Backend", "PostgreSQL"],
+-        impact: "National-Scale Reporting",
+-        icon: Globe,
+-        color: "emerald"
+-    },
+-    {
+-        slug: "sentiment-intelligence",
+-        title: "Sentiment Intelligence",
+-        category: "Advanced Data Analytics",
+-        description: "A sophisticated NLP suite for analyzing public sentiment on Zambian services using SVM and Logistic Regression models with high-precision embeddings.",
+-        tech: ["Python", "Scikit-Learn", "NLP Library"],
+-        impact: "94% Accuracy Baseline",
+-        icon: Binary,
+-        color: "purple"
+-    },
+-    {
+-        slug: "finguard-siem",
+-        title: "FinGuard SIEM",
+-        category: "Cyber Resilience",
+-        description: "Real-time security event monitoring and fraud detection engine, protecting local Zambian financial data against mobile money malware and cybercrime.",
+-        tech: ["Python", "Network Analysis", "Anomaly AI"],
+-        impact: "100% Data Sovereignty",
+-        icon: Activity,
+-        color: "rose"
+-    }
+-];
+-
+-export default function ProjectShowcase() {
+-    return (
+-        <section id="projects" className="py-24 px-6 relative bg-white/[0.01]">
+-            <div className="max-w-7xl mx-auto">
+-                <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
+-                    <div className="max-w-2xl">
+-                        <motion.div
+-                            initial={{ opacity: 0, x: -20 }}
+-                            whileInView={{ opacity: 1, x: 0 }}
+-                            viewport={{ once: true }}
+-                            className="flex items-center gap-2 text-blue-500 font-black text-sm tracking-[0.3em] uppercase mb-4"
+-                        >
+-                            <Terminal className="w-4 h-4" />
+-                            Project Intelligence
+-                        </motion.div>
+-                        <h2 className="text-4xl md:text-6xl font-black text-white">
+-                            Engineering <span className="text-gradient">Projects</span>
+-                        </h2>
+-                    </div>
+-                    <p className="text-slate-400 text-lg md:text-right max-w-sm">
+-                        Direct access to the elite engineering projects powering the next generation of Zambian enterprise.
+-                    </p>
+-                </div>
++type PortfolioItem = {
++  name: string;
++  description: string;
++  tech: string[];
++  href?: string;
++  external?: string;
++};
+ 
+-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+-                    {projects.map((project, idx) => (
+-                        <motion.div
+-                            key={project.title}
+-                            initial={{ opacity: 0, scale: 0.95 }}
+-                            whileInView={{ opacity: 1, scale: 1 }}
+-                            viewport={{ once: true }}
+-                            transition={{ delay: idx * 0.1 }}
+-                            className="group relative glass p-8 rounded-[2.5rem] border border-white/5 hover:border-blue-500/30 transition-all overflow-hidden flex flex-col h-full bg-black/40"
+-                        >
+-                            {/* Terminal Header Decorator */}
+-                            <div className="flex items-center gap-2 mb-6 border-b border-white/5 pb-4 opacity-40 group-hover:opacity-100 transition-opacity">
+-                                <div className="w-2.5 h-2.5 rounded-full bg-rose-500" />
+-                                <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+-                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+-                                <span className="text-[10px] font-mono text-slate-500 ml-4 font-bold uppercase tracking-widest">{project.title}.py - READ_ONLY</span>
+-                            </div>
++type PortfolioGroup = {
++  eyebrow: string;
++  title: string;
++  description: string;
++  icon: typeof Sprout;
++  accent: "emerald" | "blue" | "amber" | "purple";
++  items: PortfolioItem[];
++};
+ 
+-                            <div className="flex items-center justify-between mb-8">
+-                                <div className={`w-14 h-14 rounded-2xl bg-${project.color}-500/10 border border-${project.color}-500/20 flex items-center justify-center`}>
+-                                    <project.icon className={`w-7 h-7 text-${project.color}-500`} />
+-                                </div>
+-                                <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-slate-400">
+-                                    {project.category}
+-                                </div>
+-                            </div>
++const groups: PortfolioGroup[] = [
++  {
++    eyebrow: "MORLEYAI-OWNED / PRODUCT SYSTEMS",
++    title: "Products",
++    description: "Systems MorleyAI is building as repeatable products for long-term use and adoption.",
++    icon: Sprout,
++    accent: "emerald",
++    items: [
++      {
++        name: "Nyoniline",
++        description: "An AI-powered poultry operating system for Zambia with flock health, market intelligence, feed planning, and resilient field workflows.",
++        tech: ["React", "AI Diagnostics", "Offline-First"],
++        href: "/products/nyoniline",
++      },
++      {
++        name: "Zambia Service Watch",
++        description: "A MorleyAI product for monitoring public service delivery through structured reporting, multi-tenant workflows, and automated oversight.",
++        tech: ["Python", "Monitoring", "Bot Simulation"],
++        href: "/projects/service-watch",
++      },
++    ],
++  },
++  {
++    eyebrow: "CLIENT-OWNED / DEVELOPED BY MORLEYAI",
++    title: "Client products and websites",
++    description: "Digital products and websites developed for organizations that own and operate the resulting systems.",
++    icon: Users,
++    accent: "blue",
++    items: [
++      {
++        name: "Lumikiza",
++        description: "A Whitewood Management Services product and website connecting Zambian founders with strategic advisors through matching and session workflows.",
++        tech: ["Next.js", "Matching Logic", "Secure Portal"],
++        href: "/projects/lumikiza",
++        external: "https://www.whitewoodms.co.zm/",
++      },
++      {
++        name: "Latu Foundation Website",
++        description: "A client website engineered to support the foundation's public presence, community work, and stakeholder engagement.",
++        tech: ["Next.js", "Cloud Infrastructure", "Impact UX"],
++        href: "/projects/latu-foundation",
++      },
++      {
++        name: "Ollie's OSG",
++        description: "A premium digital strategy and leadership portal developed for Ollie Strategic Group.",
++        tech: ["Premium UX", "Brand Engineering", "Strategy Portal"],
++        href: "/projects/ollie-osg",
++      },
++    ],
++  },
++  {
++    eyebrow: "DEVELOPED / AWAITING CLIENT PAYMENT",
++    title: "Pending deployment",
++    description: "Completed development that is not yet deployed because the client payment or release step is still outstanding.",
++    icon: Clock3,
++    accent: "amber",
++    items: [
++      {
++        name: "CPHP Website",
++        description: "A developed client website awaiting payment before deployment. It is intentionally not presented as a live public system.",
++        tech: ["Web Engineering", "Content Systems", "Deployment Ready"],
++        href: "/projects/cphp-website",
++      },
++    ],
++  },
++  {
++    eyebrow: "PROTOTYPES / RESEARCH SYSTEMS",
++    title: "Prototype systems",
++    description: "Exploratory systems and technical prototypes created to test workflows, models, and infrastructure patterns.",
++    icon: FlaskConical,
++    accent: "purple",
++    items: [
++      { name: "CDF Dashboard", description: "A data visualization prototype for tracking Constituency Development Fund allocation and performance.", tech: ["Python", "Plotly", "Data Analysis"], href: "/projects/cdf-dashboard" },
++      { name: "FinGuard SIEM", description: "A cyber-resilience and security event monitoring prototype focused on financial-data protection.", tech: ["Python", "Network Analysis", "Anomaly AI"], href: "/projects/finguard-siem" },
++      { name: "ML Fraud Detection", description: "A predictive modeling prototype for identifying suspicious financial transactions.", tech: ["Python", "Scikit-Learn", "Predictive AI"], href: "/projects/fraud-detection" },
++      { name: "Human Rights Commission Web Application", description: "A strategic information and case-tracking prototype for national human rights monitoring workflows.", tech: ["Next.js", "Python Backend", "PostgreSQL"], href: "/projects/hrc-web-app" },
++      { name: "Malaria Climate Data and Prediction Model", description: "A research prototype exploring climate-linked malaria risk signals and predictive modeling.", tech: ["Python", "Climate Data", "Prediction Models"] },
++      { name: "UNICEF School Absentee Monitoring System", description: "A monitoring prototype for understanding school attendance patterns and intervention signals.", tech: ["Data Systems", "Monitoring", "Reporting"] },
++      { name: "Ubuntu Bwesu Website", description: "A website prototype developed to support the organization's digital presence and public communication.", tech: ["Web Engineering", "UX Design", "Content Systems"] },
++      { name: "Patient Management Systems", description: "Patient-management workflows implemented through DHIS2 Tracker programs for structured health-data operations.", tech: ["DHIS2 Tracker", "Health Data", "Program Design"] },
++      { name: "AuraStream", description: "An autonomous AI engineering prototype for generating products, content, and strategic intelligence workflows.", tech: ["Python", "OpenAI API", "Agentic Logic"], href: "/projects/aurastream" },
++      { name: "Sentiment Intelligence", description: "An NLP prototype for analyzing public sentiment on Zambian services using supervised learning models.", tech: ["Python", "NLP", "Scikit-Learn"], href: "/projects/sentiment-intelligence" },
++    ],
++  },
++];
+ 
+-                            <h3 className="text-2xl font-black text-white mb-4 group-hover:text-blue-400 transition-colors font-mono">
+-                                {project.title}
+-                                <span className="animate-pulse ml-2 text-blue-500">_</span>
+-                            </h3>
++const accentStyles = {
++  emerald: { icon: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20", line: "bg-emerald-400", label: "text-emerald-300" },
++  blue: { icon: "bg-blue-500/10 text-blue-300 border-blue-500/20", line: "bg-blue-400", label: "text-blue-300" },
++  amber: { icon: "bg-amber-500/10 text-amber-300 border-amber-500/20", line: "bg-amber-400", label: "text-amber-300" },
++  purple: { icon: "bg-purple-500/10 text-purple-300 border-purple-500/20", line: "bg-purple-400", label: "text-purple-300" },
++} as const;
+ 
+-                            <p className="text-slate-400 leading-relaxed mb-8 flex-grow text-sm">
+-                                {project.description}
+-                            </p>
++function PortfolioCard({ item, accent }: { item: PortfolioItem; accent: PortfolioGroup["accent"] }) {
++  const styles = accentStyles[accent];
++  return (
++    <div className="group flex h-full flex-col rounded-[1.75rem] border border-white/10 bg-black/25 p-6 transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]">
++      <div className={`mb-5 h-1 w-12 rounded-full ${styles.line}`} />
++      <h4 className="text-xl font-black text-white">{item.name}</h4>
++      <p className="mt-3 flex-grow text-sm leading-relaxed text-slate-400">{item.description}</p>
++      <div className="mt-6 flex flex-wrap gap-2">
++        {item.tech.map((tech) => <span key={tech} className="rounded-lg border border-white/10 bg-black/30 px-2.5 py-1.5 font-mono text-[10px] text-slate-300">{tech}</span>)}
++      </div>
++      <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-5">
++        {item.href ? <Link href={item.href} className={`group/link inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest ${styles.label}`}>View file <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" /></Link> : <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-600"><Code2 className="h-3.5 w-3.5" /> Archive entry</span>}
++        {item.external && <a href={item.external} target="_blank" rel="noreferrer" aria-label={`Visit ${item.name} website`} className="ml-auto text-slate-500 transition-colors hover:text-white"><ExternalLink className="h-4 w-4" /></a>}
++      </div>
++    </div>
++  );
++}
+ 
+-                            <div className="flex flex-wrap gap-2 mb-8">
+-                                {project.tech.map(t => (
+-                                    <span key={t} className="text-[10px] bg-black/60 border border-white/10 px-3 py-1.5 rounded-lg text-slate-300 font-mono">
+-                                        {t}
+-                                    </span>
+-                                ))}
+-                            </div>
++export default function ProjectShowcase() {
++  return (
++    <section id="projects" className="relative bg-white/[0.01] px-6 py-28">
++      <div className="mx-auto max-w-7xl">
++        <div className="mb-20 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
++          <div className="max-w-3xl">
++            <div className="mb-5 flex items-center gap-3 font-mono text-sm font-black uppercase tracking-[0.3em] text-blue-300"><Rocket className="h-4 w-4" /> Portfolio intelligence</div>
++            <h2 className="text-4xl font-black text-white md:text-7xl">What we <span className="text-gradient">build.</span></h2>
++          </div>
++          <p className="max-w-md text-lg leading-relaxed text-slate-400 lg:text-right">Products we are taking to market, client systems we have delivered, and prototypes that show how we think.</p>
++        </div>
+ 
+-                            <div className="pt-6 border-t border-white/5 flex items-center justify-between">
+-                                <div>
+-                                    <p className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Impact Result</p>
+-                                    <div className="flex items-center gap-2">
+-                                        <div className={`w-1.5 h-1.5 rounded-full bg-${project.color}-500 shadow-[0_0_8px] shadow-${project.color}-500/50`} />
+-                                        <p className={`text-sm font-bold text-${project.color}-400`}>{project.impact}</p>
+-                                    </div>
+-                                </div>
+-                                <Link
+-                                    href={`/projects/${project.slug}`}
+-                                    className="px-6 py-2.5 rounded-xl border border-white/10 flex items-center gap-2 text-xs font-bold text-white group-hover:bg-blue-600 group-hover:border-blue-600 transition-all font-mono"
+-                                >
+-                                    EXECUTE
+-                                    <ArrowRight className="w-4 h-4" />
+-                                </Link>
+-                            </div>
+-                        </motion.div>
+-                    ))}
++        <div className="space-y-16">
++          {groups.map((group, groupIndex) => {
++            const Icon = group.icon;
++            const styles = accentStyles[group.accent];
++            return (
++              <motion.div key={group.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.6, delay: groupIndex * 0.05 }}>
++                <div className="mb-8 flex flex-col gap-4 border-b border-white/10 pb-6 md:flex-row md:items-end md:justify-between">
++                  <div className="flex items-start gap-4">
++                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border ${styles.icon}`}><Icon className="h-6 w-6" /></div>
++                    <div><p className={`font-mono text-[10px] font-bold tracking-[0.2em] ${styles.label}`}>{group.eyebrow}</p><h3 className="mt-2 text-3xl font-black text-white md:text-4xl">{group.title}</h3></div>
++                  </div>
++                  <p className="max-w-xl text-sm leading-relaxed text-slate-500 md:text-right">{group.description}</p>
+                 </div>
++                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">{group.items.map((item) => <PortfolioCard key={item.name} item={item} accent={group.accent} />)}</div>
++              </motion.div>
++            );
++          })}
++        </div>
+ 
+-                <motion.div
+-                    initial={{ opacity: 0, y: 20 }}
+-                    whileInView={{ opacity: 1, y: 0 }}
+-                    viewport={{ once: true }}
+-                    className="mt-16 flex justify-center"
+-                >
+-                    <Link href="/about" className="group flex items-center gap-2 text-slate-500 hover:text-white transition-colors font-bold text-sm tracking-widest uppercase">
+-                        View All Intelligence Files
+-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+-                    </Link>
+-                </motion.div>
+-            </div>
+-        </section>
+-    );
++        <div className="mt-20 flex flex-col items-start justify-between gap-6 rounded-[2rem] border border-blue-400/20 bg-blue-400/[0.06] p-8 md:flex-row md:items-center md:p-10">
++          <div><p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-blue-300">Need a system of your own?</p><h3 className="mt-3 text-2xl font-black text-white md:text-3xl">Bring us the workflow. We will engineer the operating layer.</h3></div>
++          <Link href="#contact" className="group inline-flex shrink-0 items-center gap-3 rounded-2xl bg-blue-600 px-5 py-3 text-sm font-black text-white transition-colors hover:bg-blue-500">Start a project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
++        </div>
++      </div>
++    </section>
++  );
+ }
+diff --git a/src/lib/products.ts b/src/lib/products.ts
+index 18f3ffa..2a84b57 100644
+--- a/src/lib/products.ts
++++ b/src/lib/products.ts
+@@ -1,7 +1,7 @@
+-import { Activity, Bot, Globe, Sprout, Users } from "lucide-react";
++import { Activity, Bot, Sprout } from "lucide-react";
+ import type { LucideIcon } from "lucide-react";
+ 
+-export type ProductStatus = "IN ACTIVE BUILD" | "LIVE ECOSYSTEM";
++export type ProductStatus = "IN ACTIVE BUILD" | "IN DEVELOPMENT";
+ 
+ export interface Product {
+   slug: string;
+@@ -20,11 +20,15 @@ export interface Product {
+   href: string;
+ }
+ 
++/**
++ * Products are MorleyAI-owned or MorleyAI-led product bets.
++ * Completed client and commissioned work belongs in ProjectShowcase instead.
++ */
+ export const products: Product[] = [
+   {
+     slug: "nyoniline",
+     name: "Nyoniline",
+-    eyebrow: "FIELD OPERATIONS / POULTRY INTELLIGENCE",
++    eyebrow: "MORLEYAI PRODUCT / POULTRY INTELLIGENCE",
+     tagline: "The operating system for Zambia's poultry economy.",
+     description:
+       "An AI-powered poultry farming platform that brings flock health, market intelligence, feed planning, and agribusiness workflows into one resilient field tool.",
+@@ -44,25 +48,25 @@ export const products: Product[] = [
+     href: "/products/nyoniline",
+   },
+   {
+-    slug: "lumikiza",
+-    name: "Lumikiza Zambia",
+-    eyebrow: "ADVISORY / ENTERPRISE ECOSYSTEM",
+-    tagline: "Connecting ambition with expertise.",
++    slug: "service-watch",
++    name: "Zambia Service Watch",
++    eyebrow: "MORLEYAI PRODUCT / PUBLIC SERVICE INTELLIGENCE",
++    tagline: "A clearer signal for public service delivery.",
+     description:
+-      "A dual-sided digital advisory ecosystem helping Zambian founders find strategic support while advisors manage sessions, governance, and relationships.",
+-    category: "Enterprise Advisory Platform",
+-    status: "LIVE ECOSYSTEM",
+-    icon: Users,
++      "A MorleyAI monitoring product for structured reporting, multi-tenant oversight, and automated signals across public service workflows in Zambia.",
++    category: "Public Service Monitoring",
++    status: "IN DEVELOPMENT",
++    icon: Activity,
+     accent: "blue",
+     capabilities: [
+-      "Founder and advisor experiences",
+-      "Intelligent matching workflows",
+-      "Session orchestration and governance",
+-      "Secure, locally aligned infrastructure",
++      "Structured service-delivery reporting",
++      "Multi-tenant monitoring workflows",
++      "Automated oversight signals",
++      "Executive visibility across service areas",
+     ],
+-    stack: ["Next.js", "Matching Logic", "Secure Portal", "Zambian VPS"],
+-    impact: "A stronger bridge between capital and capability",
+-    href: "/projects/lumikiza",
++    stack: ["Python", "Monitoring", "Bot Simulation", "Multi-Tenant"],
++    impact: "More visible public service performance",
++    href: "/projects/service-watch",
+   },
+ ];
+ 
+@@ -70,6 +74,6 @@ export const nyonilineProduct = products[0];
+ 
+ export const productSignals = [
+   { label: "Signal", value: "AI-assisted care", icon: Bot },
+-  { label: "Resilience", value: "Offline-first", icon: Activity },
+-  { label: "Reach", value: "Built for Zambia", icon: Globe },
++  { label: "Resilience", value: "Offline-first", icon: Sprout },
++  { label: "Reach", value: "Built for Zambia", icon: Sprout },
+ ];

@@ -16,7 +16,7 @@ export default function ProductsPage() {
             <Leaf className="h-4 w-4" /> MorleyAI products
           </div>
           <h1 className="mt-8 text-5xl font-black leading-[0.94] tracking-tight text-white md:text-8xl">Useful intelligence, <span className="text-gradient">shipped.</span></h1>
-          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-slate-400">We build focused products for the real conditions of African businesses, institutions, and communities. Each one starts with a local problem and earns its way into a wider system.</p>
+          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-slate-400">Products are MorleyAI-owned systems that we are developing for repeatable use and long-term adoption. Client-owned products and completed commissioned work are documented separately in our executed project portfolio.</p>
         </div>
 
         <div className="mt-20 space-y-8">
@@ -61,7 +61,7 @@ export default function ProductsPage() {
         </div>
 
         <div className="mt-12 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-center md:p-12">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Next product / your problem</p>
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Next MorleyAI product / your problem</p>
           <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-black text-white md:text-5xl">Have a system that should exist?</h2>
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-slate-400">Bring us the workflow, the constraint, or the opportunity. We will help you turn it into a product people can depend on.</p>
           <Link href="/#contact" className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-5 py-3 text-sm font-black text-white transition-colors hover:bg-blue-500">Start a build <ArrowUpRight className="h-4 w-4" /></Link>

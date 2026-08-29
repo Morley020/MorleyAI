@@ -1,7 +1,7 @@
-import { Activity, Bot, Globe, Sprout, Users } from "lucide-react";
+import { Activity, Bot, Sprout } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-export type ProductStatus = "IN ACTIVE BUILD" | "LIVE ECOSYSTEM";
+export type ProductStatus = "IN ACTIVE BUILD" | "IN DEVELOPMENT";
 
 export interface Product {
   slug: string;
@@ -20,11 +20,15 @@ export interface Product {
   href: string;
 }
 
+/**
+ * Products are MorleyAI-owned or MorleyAI-led product bets.
+ * Completed client and commissioned work belongs in ProjectShowcase instead.
+ */
 export const products: Product[] = [
   {
     slug: "nyoniline",
     name: "Nyoniline",
-    eyebrow: "FIELD OPERATIONS / POULTRY INTELLIGENCE",
+    eyebrow: "MORLEYAI PRODUCT / POULTRY INTELLIGENCE",
     tagline: "The operating system for Zambia's poultry economy.",
     description:
       "An AI-powered poultry farming platform that brings flock health, market intelligence, feed planning, and agribusiness workflows into one resilient field tool.",
@@ -44,25 +48,25 @@ export const products: Product[] = [
     href: "/products/nyoniline",
   },
   {
-    slug: "lumikiza",
-    name: "Lumikiza Zambia",
-    eyebrow: "ADVISORY / ENTERPRISE ECOSYSTEM",
-    tagline: "Connecting ambition with expertise.",
+    slug: "service-watch",
+    name: "Zambia Service Watch",
+    eyebrow: "MORLEYAI PRODUCT / PUBLIC SERVICE INTELLIGENCE",
+    tagline: "A clearer signal for public service delivery.",
     description:
-      "A dual-sided digital advisory ecosystem helping Zambian founders find strategic support while advisors manage sessions, governance, and relationships.",
-    category: "Enterprise Advisory Platform",
-    status: "LIVE ECOSYSTEM",
-    icon: Users,
+      "A MorleyAI monitoring product for structured reporting, multi-tenant oversight, and automated signals across public service workflows in Zambia.",
+    category: "Public Service Monitoring",
+    status: "IN DEVELOPMENT",
+    icon: Activity,
     accent: "blue",
     capabilities: [
-      "Founder and advisor experiences",
-      "Intelligent matching workflows",
-      "Session orchestration and governance",
-      "Secure, locally aligned infrastructure",
+      "Structured service-delivery reporting",
+      "Multi-tenant monitoring workflows",
+      "Automated oversight signals",
+      "Executive visibility across service areas",
     ],
-    stack: ["Next.js", "Matching Logic", "Secure Portal", "Zambian VPS"],
-    impact: "A stronger bridge between capital and capability",
-    href: "/projects/lumikiza",
+    stack: ["Python", "Monitoring", "Bot Simulation", "Multi-Tenant"],
+    impact: "More visible public service performance",
+    href: "/projects/service-watch",
   },
 ];
 
@@ -70,6 +74,6 @@ export const nyonilineProduct = products[0];
 
 export const productSignals = [
   { label: "Signal", value: "AI-assisted care", icon: Bot },
-  { label: "Resilience", value: "Offline-first", icon: Activity },
-  { label: "Reach", value: "Built for Zambia", icon: Globe },
+  { label: "Resilience", value: "Offline-first", icon: Sprout },
+  { label: "Reach", value: "Built for Zambia", icon: Sprout },
 ];

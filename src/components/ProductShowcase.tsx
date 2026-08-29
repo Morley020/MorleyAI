@@ -79,7 +79,7 @@ function ProductTelemetry({ product }: { product: (typeof products)[number] }) {
 }
 
 export default function ProductShowcase() {
-  const [featured, secondary] = products;
+  const featured = products[0];
   const featuredAccent = accentStyles[featured.accent];
   const FeaturedIcon = featured.icon;
 
@@ -97,11 +97,11 @@ export default function ProductShowcase() {
               From intelligence <span className="text-gradient">to impact.</span>
             </h2>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-400">
-              MorleyAI turns complex local problems into products people can use every day. Explore the systems we are building for Africa's next operating layer.
+              Products are MorleyAI-owned systems we are taking from insight to adoption. For completed client and commissioned work, explore our executed project files.
             </p>
           </div>
-          <Link href="/about" className="group inline-flex shrink-0 items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-slate-400 transition-colors hover:text-white">
-            View the studio <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          <Link href="/#projects" className="group inline-flex shrink-0 items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-slate-400 transition-colors hover:text-white">
+            View executed projects <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Link>
         </div>
 
@@ -156,12 +156,12 @@ export default function ProductShowcase() {
         </motion.div>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-10">
-            <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">{secondary.status}</p>
-            <h3 className="mt-4 text-3xl font-black text-white">{secondary.name}</h3>
-            <p className="mt-4 leading-relaxed text-slate-400">{secondary.description}</p>
-            <Link href={secondary.href} className="group mt-8 inline-flex items-center gap-2 text-sm font-bold text-blue-300">
-              Read the case file <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          <div className="rounded-[2rem] border border-blue-300/20 bg-blue-300/[0.05] p-8 md:p-10">
+            <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-blue-300">Executed project files</p>
+            <h3 className="mt-4 text-3xl font-black text-white">Built for clients. Delivered in the real world.</h3>
+            <p className="mt-4 leading-relaxed text-slate-400">Client products, delivered websites, pending deployments, and research prototypes are organized in the executed project portfolio, with ownership and delivery status made explicit.</p>
+            <Link href="/#projects" className="group mt-8 inline-flex items-center gap-2 text-sm font-bold text-blue-300">
+              Browse project files <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
           </div>
           <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 sm:grid-cols-2 md:grid-cols-4 md:p-8">
