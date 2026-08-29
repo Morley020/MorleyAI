@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight, Bot, Check, Code2, Database, LineChart, MessageCircle, WifiOff } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Bot, Check, Code2, Database, LineChart, WifiOff } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -66,52 +66,16 @@ export default function NyonilinePage() {
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.15, duration: 0.7 }} className="relative">
+          <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.15, duration: 0.7 }} className="relative flex justify-center">
             <div className="absolute -inset-10 rounded-full bg-emerald-300/10 blur-[100px]" />
-            <div className="relative overflow-hidden rounded-[2.5rem] border border-emerald-300/20 bg-slate-950/90 p-6 shadow-2xl md:p-8">
-              <div className="flex items-center justify-between border-b border-white/10 pb-5">
-                <div className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                </div>
-                <span className="font-mono text-[10px] font-bold tracking-[0.18em] text-slate-500">NYONILINE / FIELD_OS</span>
-              </div>
-              <div className="mt-7 flex items-center justify-between">
-                <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">Today&apos;s operation</p>
-                  <p className="mt-2 text-2xl font-black text-white">Flock overview</p>
-                </div>
-                <div className="rounded-2xl border border-emerald-300/20 bg-emerald-300/10 px-3 py-2 text-right">
-                  <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-300">System</p>
-                  <p className="mt-1 text-xs font-bold text-white">SYNC READY</p>
-                </div>
-              </div>
-              <div className="mt-7 grid grid-cols-2 gap-3">
-                {[["Active flocks", "04"], ["Birds tracked", "2,840"], ["Health alerts", "02"], ["Market signal", "+12%"]].map(([label, value]) => (
-                  <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                    <p className="font-mono text-[9px] uppercase tracking-widest text-slate-500">{label}</p>
-                    <p className="mt-2 text-2xl font-black text-white">{value}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                <div className="mb-4 flex items-center justify-between">
-                  <p className="font-mono text-[9px] uppercase tracking-widest text-slate-500">Growth / last 7 days</p>
-                  <p className="text-xs font-bold text-emerald-300">+8.4%</p>
-                </div>
-                <div className="flex h-28 items-end gap-2">
-                  {[35, 42, 50, 46, 65, 74, 92].map((height, index) => <div key={index} className="flex-1 rounded-t-lg bg-gradient-to-t from-emerald-500/40 to-emerald-200" style={{ height: `${height}%` }} />)}
-                </div>
-              </div>
-              <div className="mt-4 flex items-center gap-3 rounded-2xl border border-amber-300/20 bg-amber-300/5 p-4">
-                <MessageCircle className="h-5 w-5 text-amber-300" />
-                <div>
-                  <p className="text-xs font-bold text-white">AI health assistant</p>
-                  <p className="mt-1 text-[11px] text-slate-500">Review a symptom, log an observation, keep moving.</p>
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/nyoniline-dashboard-mock.svg"
+              alt="The Nyoniline dashboard on a phone: today's mortality, feed, and weight stats, quick actions, a farming tip, and upcoming tasks."
+              width={340}
+              height={696}
+              className="relative w-full max-w-[340px] h-auto drop-shadow-2xl"
+              priority
+            />
           </motion.div>
         </div>
 
