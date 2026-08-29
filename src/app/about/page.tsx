@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Shield, Zap, Globe, Heart, Award, Target, Landmark, Lightbulb } from "lucide-react";
+import { Shield, Zap, Globe, Heart, Server, Target, Landmark, Lightbulb } from "lucide-react";
 
 /**
  * About Page
@@ -87,28 +87,28 @@ export default function AboutPage() {
                         </p>
                     </motion.div>
                     <div className="relative">
-                        <div className="absolute inset-0 bg-blue-500/20 blur-[120px] rounded-full" />
+                        <div className="absolute inset-0 bg-[#E8A93B]/10 blur-[120px] rounded-full" />
                         <div className="glass aspect-square rounded-[3rem] border border-white/10 flex items-center justify-center relative overflow-hidden">
                             <div className="grid grid-cols-2 gap-4 p-12">
                                 <div className="p-6 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center justify-center text-center">
-                                    <Award className="w-8 h-8 text-blue-500 mb-2" />
-                                    <span className="text-2xl font-bold text-white">100%</span>
-                                    <span className="text-xs text-slate-500">Local Hosting</span>
+                                    <Server className="w-7 h-7 text-[#E8A93B] mb-2" />
+                                    <span className="text-xl font-bold text-white">Local-First</span>
+                                    <span className="text-xs text-slate-500">Infrastructure</span>
                                 </div>
                                 <div className="p-6 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center justify-center text-center">
-                                    <Zap className="w-8 h-8 text-purple-500 mb-2" />
-                                    <span className="text-2xl font-bold text-white">4X</span>
-                                    <span className="text-xs text-slate-500">Faster Build</span>
+                                    <Zap className="w-7 h-7 text-[#E8A93B] mb-2" />
+                                    <span className="text-xl font-bold text-white">AI-Accelerated</span>
+                                    <span className="text-xs text-slate-500">Delivery Cycle</span>
                                 </div>
                                 <div className="p-6 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center justify-center text-center">
-                                    <Shield className="w-8 h-8 text-emerald-500 mb-2" />
-                                    <span className="text-2xl font-bold text-white">2025</span>
-                                    <span className="text-xs text-slate-500">Cyber Compliant</span>
+                                    <Shield className="w-7 h-7 text-[#E8A93B] mb-2" />
+                                    <span className="text-xl font-bold text-white">Act No. 2, 2021</span>
+                                    <span className="text-xs text-slate-500">Cyber Security Compliant</span>
                                 </div>
                                 <div className="p-6 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center justify-center text-center">
-                                    <Lightbulb className="w-8 h-8 text-amber-500 mb-2" />
-                                    <span className="text-2xl font-bold text-white">AI</span>
-                                    <span className="text-xs text-slate-500">Driven DNA</span>
+                                    <Lightbulb className="w-7 h-7 text-[#E8A93B] mb-2" />
+                                    <span className="text-xl font-bold text-white">AI-Native</span>
+                                    <span className="text-xs text-slate-500">Engineering DNA</span>
                                 </div>
                             </div>
                         </div>
