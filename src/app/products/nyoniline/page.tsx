@@ -74,7 +74,7 @@ export default function NyonilinePage() {
               width={340}
               height={696}
               className="relative w-full max-w-[340px] h-auto drop-shadow-2xl"
-              priority
+              priority unoptimized
             />
           </motion.div>
         </div>
