@@ -1,0 +1,31 @@
+diff a/src/components/PartnerNetwork.tsx b/src/components/PartnerNetwork.tsx	(rejected hunks)
+@@ -1,7 +1,7 @@
+ "use client";
+ 
+ import { motion } from "framer-motion";
+-import { Shield, Radio, Server, Globe2 } from "lucide-react";
++import { Shield, Radio, Server, Globe2, Building2 } from "lucide-react";
+ 
+ const partners = [
+     {
+@@ -44,6 +44,20 @@ const partners = [
+             { name: "SMART Zambia", role: "Digital e-Government Institute" },
+         ],
+     },
++    {
++        category: "Our Clients",
++        icon: Building2,
++        color: "amber",
++        items: [
++            { name: "ZAMMSA", role: "Zambia Medicines & Medical Supplies Agency" },
++            { name: "WWF", role: "Technical Assistance & Training" },
++            { name: "K·I", role: "Technical Assistance & Training" },
++            { name: "Zambia Sugar", role: "Technical Assistance & Training" },
++            { name: "Office of the Auditor General", role: "Technical Assistance & Training" },
++            { name: "BBC Media Action", role: "Technical Assistance & Training" },
++            { name: "ZNBS", role: "Zambia National Building Society" },
++        ],
++    },
+ ];
+ 
+ export default function PartnerNetwork() {

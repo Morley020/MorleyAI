@@ -1,0 +1,37 @@
+diff a/src/app/about/page.tsx b/src/app/about/page.tsx	(rejected hunks)
+@@ -2,7 +2,7 @@
+ 
+ import { motion } from "framer-motion";
+ import Link from "next/link";
+-import { Shield, Zap, Globe, Heart, Server, Target, Landmark, Lightbulb } from "lucide-react";
++import { Shield, Zap, Globe, Heart, Server, Target, Landmark, Lightbulb, Users, Award } from "lucide-react";
+ 
+ /**
+  * About Page
+@@ -38,6 +38,16 @@ export default function AboutPage() {
+         }
+     ];
+ 
++    const leadership = [
++        { name: "Morley Mujansi", role: "Founder" },
++        { name: "Jeremiah Mwiinga", role: "Co-Founder & Lead, Strategy" },
++    ];
++
++    const board = [
++        { name: "Adebayo Olufunso", role: "Director of Monitoring, Evaluation, Research and Learning (MERL)" },
++        { name: "Lillian Mungulube", role: "Board Member" },
++    ];
++
+     return (
+         <div className="pt-32 pb-24 px-6 min-h-screen">
+             <div className="max-w-7xl mx-auto">
+@@ -85,6 +95,9 @@ export default function AboutPage() {
+                         <p className="text-lg text-slate-400 leading-relaxed">
+                             <strong>MorleyAI</strong> was born to bridge this gap. We combine high-speed agentic development with Zambia-based infrastructure. We don&apos;t just build apps; we build the <strong>Secure Intelligence</strong> that allows Zambian businesses to compete on a global stage while remaining rooted at home.
+                         </p>
++                        <p className="text-lg text-slate-400 leading-relaxed">
++                            MorleyAI has since merged with <strong>Adino Creations</strong>, a Lusaka-based data analytics and digital consulting firm. Together, we bring combined strength in data analytics, data management, digital health consulting, and monitoring &amp; evaluation, alongside MorleyAI&apos;s AI and software engineering core.
++                        </p>
+                     </motion.div>
+                     <div className="relative">
+                         <div className="absolute inset-0 bg-[#E8A93B]/10 blur-[120px] rounded-full" />

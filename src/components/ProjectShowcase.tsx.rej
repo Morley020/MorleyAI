@@ -1,0 +1,33 @@
+diff a/src/components/ProjectShowcase.tsx b/src/components/ProjectShowcase.tsx	(rejected hunks)
+@@ -1,7 +1,7 @@
+ "use client";
+ 
+ import { motion } from "framer-motion";
+-import { ArrowRight, Bot, CheckCircle2, Clock3, Code2, ExternalLink, FlaskConical, Globe, HeartPulse, LockKeyhole, Rocket, Sprout, Users } from "lucide-react";
++import { ArrowRight, Bot, CheckCircle2, Clock3, Code2, ExternalLink, FlaskConical, Globe, HeartPulse, LockKeyhole, Rocket, Sprout, Users, Building2 } from "lucide-react";
+ import Link from "next/link";
+ 
+ type PortfolioItem = {
+@@ -71,6 +71,22 @@ const groups: PortfolioGroup[] = [
+       },
+     ],
+   },
++  {
++    eyebrow: "DELIVERED BY ADINO CREATIONS",
++    title: "Technical assistance & training",
++    description: "Client engagements delivered by Adino Creations, now part of MorleyAI, since 2020.",
++    icon: Building2,
++    accent: "amber",
++    items: [
++      { name: "ZAMMSA", description: "Technical assistance and training for the Zambia Medicines and Medical Supplies Agency.", tech: ["Data Analytics", "Consulting"] },
++      { name: "WWF", description: "Technical assistance and training engagement with WWF.", tech: ["Data Management", "Consulting"] },
++      { name: "K·I", description: "Technical assistance and training engagement with K·I.", tech: ["Data Analytics", "Consulting"] },
++      { name: "Zambia Sugar", description: "Technical assistance and training engagement with Zambia Sugar.", tech: ["Data Management", "Consulting"] },
++      { name: "Office of the Auditor General", description: "Technical assistance and training for the Office of the Auditor General.", tech: ["M&E", "Consulting"] },
++      { name: "BBC Media Action", description: "Technical assistance and training engagement with BBC Media Action.", tech: ["Data-Driven Content", "Consulting"] },
++      { name: "ZNBS", description: "Technical assistance and training for the Zambia National Building Society.", tech: ["Data Analytics", "Consulting"] },
++    ],
++  },
+   {
+     eyebrow: "DEVELOPED / AWAITING CLIENT PAYMENT",
+     title: "Pending deployment",

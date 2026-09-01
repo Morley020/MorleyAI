@@ -1,0 +1,49 @@
+diff a/src/app/services/page.tsx b/src/app/services/page.tsx	(rejected hunks)
+@@ -7,7 +7,11 @@ import {
+     ArrowRight,
+     CheckCircle2,
+     Binary,
+-    Activity
++    Activity,
++    BarChart3,
++    Database,
++    HeartPulse,
++    PenTool
+ } from "lucide-react";
+ import SecurityEcosystem from "@/components/SecurityEcosystem";
+ import AgenticPipeline from "@/components/AgenticPipeline";
+@@ -33,6 +37,34 @@ const services = [
+         icon: Activity,
+         features: ["Real-time KPI Dashboards", "Field Data Collection", "Impact Analysis ML", "Organizational Reporting"],
+         color: "emerald"
++    },
++    {
++        title: "Data Analytics",
++        description: "Consulting for businesses seeking data-driven decision-making, with insight generation and tailored visualization solutions built around your data.",
++        icon: BarChart3,
++        features: ["Business Intelligence Dashboards", "Statistical & Predictive Insights", "Custom Data Visualization", "Decision-Support Reporting"],
++        color: "amber"
++    },
++    {
++        title: "Data Management",
++        description: "Organizing, securing, and optimizing how businesses store and retrieve data, so operations run efficiently and information stays trustworthy.",
++        icon: Database,
++        features: ["Data Governance & Security", "Storage & Retrieval Optimization", "Database Architecture", "Data Quality Assurance"],
++        color: "blue"
++    },
++    {
++        title: "Digital Health Consulting",
++        description: "Guidance for individuals and organizations navigating the digital health landscape, from system selection to implementation strategy.",
++        icon: HeartPulse,
++        features: ["DHIS2 & Health Systems Strategy", "Digital Health Roadmapping", "PEPFAR & Donor Program Support", "Health Data Interoperability"],
++        color: "rose"
++    },
++    {
++        title: "Data-Driven Content Creation",
++        description: "Partnering with organizations and individuals to create compelling, data-driven content that tells the unique story of their business.",
++        icon: PenTool,
++        features: ["Impact Storytelling", "Data-Backed Reporting Content", "Brand & Digital Content", "Stakeholder Communications"],
++        color: "purple"
+     }
+ ];
+ 
