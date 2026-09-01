@@ -38,20 +38,17 @@ export default function AboutPage() {
         }
     ];
 
-    <h1>Leadership Team</h1>
+    const managementTeam = [
+        { name: "Morley Mujansi", role: "Acting CEO" },
+        { name: "Jeremiah Mwiinga", role: "Strategy Lead" },
+        { name: "TBA", role: "Bussiness Development" },
+        { name: "TBA", role: "Admin & Operations Manager" },
+    ];
 
     const board = [
         { name: "TBA", role: "Board Chairperson" },
         { name: "TBA", role: "Board Member" },
         { name: "TBA", role: "Board Member" },
-   
-    ];
-     const Management Team = [
-        { name: "Morley Mujansi", role: "Acting CEO" },
-        { name: "Jeremiah Mwiinga", role: "Strategy Lead" },
-        { name: "TBA", role: "Bussiness Development" },
-        { name: "TBA", role: "Admin & Operations Manager" },
-    
     ];
 
     return (
@@ -173,10 +170,10 @@ export default function AboutPage() {
                             <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6">
                                 <Users className="w-6 h-6 text-blue-500" />
                             </div>
-                            <h3 className="text-xl font-bold mb-6">Leadership</h3>
+                            <h3 className="text-xl font-bold mb-6">Management Team</h3>
                             <div className="space-y-4">
-                                {leadership.map((person) => (
-                                    <div key={person.name} className="border-b border-white/5 pb-4 last:border-0 last:pb-0">
+                                {managementTeam.map((person, index) => (
+                                    <div key={`${person.name}-${index}`} className="border-b border-white/5 pb-4 last:border-0 last:pb-0">
                                         <p className="font-bold text-white">{person.name}</p>
                                         <p className="text-sm text-slate-400">{person.role}</p>
                                     </div>
@@ -189,8 +186,8 @@ export default function AboutPage() {
                             </div>
                             <h3 className="text-xl font-bold mb-6">Board of Directors</h3>
                             <div className="space-y-4">
-                                {board.map((person) => (
-                                    <div key={person.name} className="border-b border-white/5 pb-4 last:border-0 last:pb-0">
+                                {board.map((person, index) => (
+                                    <div key={`${person.name}-${index}`} className="border-b border-white/5 pb-4 last:border-0 last:pb-0">
                                         <p className="font-bold text-white">{person.name}</p>
                                         <p className="text-sm text-slate-400">{person.role}</p>
                                     </div>
