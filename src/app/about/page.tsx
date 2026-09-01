@@ -38,14 +38,20 @@ export default function AboutPage() {
         }
     ];
 
-    const leadership = [
-        { name: "Morley Mujansi", role: "Founder" },
-        { name: "Jeremiah Mwiinga", role: "Co-Founder & Lead, Strategy" },
-    ];
+    <h1>Leadership Team</h1>
 
     const board = [
-        { name: "Adebayo Olufunso", role: "Director of Monitoring, Evaluation, Research and Learning (MERL)" },
-        { name: "Lillian Mungulube", role: "Board Member" },
+        { name: "TBA", role: "Board Chairperson" },
+        { name: "TBA", role: "Board Member" },
+        { name: "TBA", role: "Board Member" },
+   
+    ];
+     const Management Team = [
+        { name: "Morley Mujansi", role: "Acting CEO" },
+        { name: "Jeremiah Mwiinga", role: "Strategy Lead" },
+        { name: "TBA", role: "Bussiness Development" },
+        { name: "TBA", role: "Admin & Operations Manager" },
+    
     ];
 
     return (
